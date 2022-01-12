@@ -1,0 +1,14 @@
+.contacts {
+  font-size: 22px;
+  font-style: normal;
+}
+
+.contacts__tel:before {
+  content: "";
+  display: inline-block;
+  background: url("../img/phone_logo.png") center center no-repeat;
+  background-size: contain;
+  height: 14px;
+  width: 25px;
+  filter: invert(100%);
+}
