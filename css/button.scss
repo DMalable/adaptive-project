@@ -1,0 +1,18 @@
+.button {
+  background-color: $yellow;
+  border-radius: 35px;
+  border-width: 0px;
+  padding: 21px 40px;
+  font-size: 16px;
+  font-weight: 800;
+  color: #000;
+  text-transform: uppercase;
+  font-family: inherit;
+  transition: background 0.2s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #ffd517;
+    transition: background 0.2s;
+  }
+}

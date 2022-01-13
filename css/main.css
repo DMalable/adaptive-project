@@ -1,6 +1,8 @@
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+@import url("fonts.css");
+@import url("normalize.css");
+html,
+body {
+  height: 100%;
 }
 
 body {
@@ -11,8 +13,10 @@ body {
   margin: 0px;
   background-color: #666;
 }
-body .wrapper {
-  min-width: 1100px;
+
+.wrapper {
+  width: 100%;
+  min-width: 1120px;
   overflow: hidden;
   min-height: 100%;
   display: -webkit-box;
@@ -22,12 +26,12 @@ body .wrapper {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: url("../img/bgpicture.png") center top no-repeat;
 }
 
 .container {
   width: 1100px;
   margin: 0px auto;
+  height: 100%;
 }
 
 p,
@@ -37,6 +41,11 @@ h3,
 h4 {
   margin: 0px;
   padding: 0px;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 ul {
@@ -51,24 +60,8 @@ a:visited {
   color: inherit;
 }
 
-.button {
-  background-color: #fedb3f;
-  border-radius: 35px;
-  border-width: 0px;
-  padding: 21px 40px;
-  font-size: 16px;
-  font-weight: 800;
-  color: #000;
-  text-transform: uppercase;
-  font-family: inherit;
-  -webkit-transition: background 0.2s;
-  transition: background 0.2s;
-  cursor: pointer;
-}
-.button:hover {
-  background-color: #ffd517;
-  -webkit-transition: background 0.2s;
-  transition: background 0.2s;
+footer {
+  width: 100%;
 }
 
 .header {
@@ -81,8 +74,7 @@ a:visited {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 23px;
-  padding: 0px 80px;
+  padding: 23px 80px 0px;
   font-weight: bold;
   color: #fff;
   margin-bottom: 100px;
@@ -174,7 +166,49 @@ a:visited {
           filter: invert(100%);
 }
 
-.welcome {
+.button {
+  background-color: #fedb3f;
+  border-radius: 35px;
+  border-width: 0px;
+  padding: 21px 40px;
+  font-size: 16px;
+  font-weight: 800;
+  color: #000;
+  text-transform: uppercase;
+  font-family: inherit;
+  -webkit-transition: background 0.2s;
+  transition: background 0.2s;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: #ffd517;
+  -webkit-transition: background 0.2s;
+  transition: background 0.2s;
+}
+
+.hero {
+  height: 100vh;
+  color: #fff;
+}
+.hero .container {
+  background: url("../img/bgpicture.png") center center no-repeat;
+  background-size: cover;
+}
+
+.hero__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.hero__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -186,12 +220,11 @@ a:visited {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 0px 0px 65px 80px;
-  color: #fff;
   max-width: 50%;
-  min-height: 488px;
+  min-height: 75vh;
 }
 
-.welcome__title {
+.hero__title {
   font-size: 48px;
   font-weight: bold;
   text-transform: uppercase;
@@ -199,18 +232,18 @@ a:visited {
   margin-bottom: 13px;
 }
 
-.welcome__descr {
+.hero__descr {
   font-size: 21px;
   margin-bottom: 35px;
 }
 
-.welcome__features {
+.hero__features {
   margin-top: auto;
   font-size: 16px;
   font-weight: bold;
 }
 
-.welcome__features-list {
+.hero__features-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -219,7 +252,7 @@ a:visited {
           justify-content: space-between;
 }
 
-.welcome__features-item {
+.hero__features-item {
   margin-left: 35px;
   padding-left: 15px;
   position: relative;
@@ -227,7 +260,7 @@ a:visited {
   line-height: 1.3em;
 }
 
-.welcome__features-item--design:before {
+.hero__features-item--design:before {
   content: "";
   position: absolute;
   top: 50%;
@@ -242,7 +275,7 @@ a:visited {
           filter: invert(100%);
 }
 
-.welcome__features-item--materials:before {
+.hero__features-item--materials:before {
   content: "";
   position: absolute;
   top: 50%;
@@ -257,7 +290,7 @@ a:visited {
           filter: invert(100%);
 }
 
-.welcome__features-item--delivery:before {
+.hero__features-item--delivery:before {
   content: "";
   position: absolute;
   top: 50%;
