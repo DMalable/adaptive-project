@@ -5,14 +5,33 @@
   padding: 21px 40px;
   font-size: 16px;
   font-weight: 800;
+  font-family: inherit;
   color: #000;
   text-transform: uppercase;
-  font-family: inherit;
-  transition: background 0.2s;
+  transition: background-color 0.2s;
   cursor: pointer;
 
   &:hover {
     background-color: #ffd517;
-    transition: background 0.2s;
+    transition: background-color 0.2s;
+  }
+}
+
+.button--type--reset {
+  background-color: transparent;
+  text-transform: none;
+  color: #fff;
+  border-width: 0px;
+  padding: 21px 20px;
+  font-family: inherit;
+  font-weight: normal;
+  font-size: 18px;
+  transition: color 0.2s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: transparent;
+    color: $yellow;
+    transition: color 0.2s;
   }
 }

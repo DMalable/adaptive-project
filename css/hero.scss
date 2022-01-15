@@ -1,17 +1,15 @@
 .hero {
   height: 100vh;
+  min-height: 600px;
   color: #fff;
 
-  .container {
-    background: url("../img/bgpicture.png") center center no-repeat;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: url("../img/bg-hero.png") center center no-repeat;
     background-size: cover;
   }
-}
-
-.hero__container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 .hero__content {
@@ -64,10 +62,14 @@ $list: design, materials, delivery;
     top: 50%;
     right: 100%;
     transform: translatey(-50%);
-    background: url("../img/#{$var}_logo.png") center center no-repeat;
+    background: url("../img/#{$var}-logo.png") center center no-repeat;
     background-size: contain;
     height: 35px;
     width: 35px;
     filter: invert(100%);
   }
+}
+
+.hero__button-container {
+  margin-bottom: 20px;
 }

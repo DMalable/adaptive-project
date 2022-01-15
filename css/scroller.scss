@@ -1,0 +1,28 @@
+.scroller {
+  position: fixed;
+  right: 17%;
+  top: 33%;
+}
+
+.scroller__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 29vh;
+}
+
+.scroller__item--active .scroller__link {
+  border-color: #fff;
+}
+
+.scroller__link {
+  display: block;
+  height: 16px;
+  width: 16px;
+  padding: 4px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  background-clip: content-box;
+  cursor: pointer;
+}

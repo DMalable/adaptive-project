@@ -2,6 +2,7 @@
 $containerwidth: 1100px;
 //var colors
 $yellow: #fedb3f;
+$black: #292929;
 
 //fonts and normalize
 @import url("fonts.css");
@@ -10,9 +11,17 @@ $yellow: #fedb3f;
 //all styles
 @import "base.scss";
 @import "header.scss";
-@import "aside.scss";
 @import "menu.scss";
 @import "logo.scss";
 @import "contacts.scss";
 @import "button.scss";
 @import "hero.scss";
+@import "section.scss";
+@import "headline.scss";
+@import "advantages.scss";
+@import "rewiews.scss";
+@import "interactive-avatar.scss";
+@import "order.scss";
+@import "form.scss";
+@import "radio.scss";
+@import "scroller.scss";
