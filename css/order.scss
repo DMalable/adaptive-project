@@ -1,7 +1,10 @@
 .order {
   color: #fff;
-  .container {
-    background: url("../img/bg-order.png") center center no-repeat;
-    background-size: cover;
-  }
+  background: url("../img/bg-order.png") center top no-repeat;
+  background-size: cover;
+
+  // .container {
+  //   background: url("../img/bg-order.png") center center no-repeat;
+  //   background-size: cover;
+  // }
 }

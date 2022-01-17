@@ -1,38 +1,42 @@
 .form {
   display: flex;
-  margin: 0px 82px;
+  margin: 0 4.56rem;
 }
 
 .form__col {
   flex: 1;
-  margin-right: 10px;
+  margin-right: 0.556rem;
 
   &:last-child {
-    margin-right: 0px;
+    margin-right: 0;
   }
 }
 
 .form__row {
   display: flex;
   flex: 1;
-  margin-bottom: 10px;
+  margin-bottom: 0.556rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .form__block {
   flex: 1;
-  margin-right: 15px;
+  margin-right: 0.833rem;
 
   &:last-child {
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
 }
 
 .form__input {
   width: 100%;
-  border: 3px solid transparent;
-  border-radius: 4px;
-  padding: 16px 10px;
-  font: 400 14px/1.42 "Open Sans", Tahoma, sans-serif;
+  border: 0.167rem solid transparent;
+  border-radius: 0.222rem;
+  padding: 0.889rem 0.556rem;
+  font: 400 0.778rem/1.42 "Open Sans", Tahoma, sans-serif;
 
   &:focus {
     outline: none;
@@ -41,17 +45,21 @@
 }
 
 .form__input--textarea {
-  height: 150px;
+  height: 8.33rem;
   resize: none;
-  margin-bottom: 20px;
+  margin-bottom: 1.11rem;
 }
 
 .form__controls {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 20px;
+  margin-bottom: 1.11rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .form__controls--margin--big {
-  margin-bottom: 45px;
+  margin-bottom: 2.5rem;
 }

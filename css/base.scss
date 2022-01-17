@@ -1,20 +1,19 @@
 html,
 body {
   height: 100%;
+  font: 400 18px/1.42 "Alegreya Sans", Tahoma, sans-serif;
 }
 
 body {
-  font: 400 18px/1.42 "Alegreya Sans", Tahoma, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #fff;
-  margin: 0px;
-  background-color: #666;
+  margin: 0;
 }
 
 .wrapper {
   width: 100%;
-  min-width: $containerwidth + 20px;
+  min-width: $containerwidth + 1.11rem;
   overflow: hidden;
   min-height: 100%;
   display: flex;
@@ -23,7 +22,7 @@ body {
 
 .container {
   width: $containerwidth;
-  margin: 0px auto;
+  margin: 0 auto;
   height: 100%;
 }
 
@@ -32,8 +31,8 @@ h1,
 h2,
 h3,
 h4 {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 
 * {
@@ -42,8 +41,8 @@ h4 {
 
 ul {
   list-style-type: none;
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 
 a,

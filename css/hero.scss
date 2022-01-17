@@ -1,14 +1,14 @@
 .hero {
   height: 100vh;
-  min-height: 600px;
+  min-height: 33.33rem;
   color: #fff;
+  background: url("../img/bg-hero.png") center top no-repeat;
+  background-size: cover;
 
   &__container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background: url("../img/bg-hero.png") center center no-repeat;
-    background-size: cover;
   }
 }
 
@@ -16,27 +16,27 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 0px 0px 65px 80px;
+  padding: 0 0 3.61rem 4.44rem;
   max-width: 50%;
   min-height: 75vh;
 }
 
 .hero__title {
-  font-size: 48px;
+  font-size: 2.67rem;
   font-weight: bold;
   text-transform: uppercase;
   line-height: 1.25em;
-  margin-bottom: 13px;
+  margin-bottom: 0.722rem;
 }
 
 .hero__descr {
-  font-size: 21px;
-  margin-bottom: 35px;
+  font-size: 1.17rem;
+  margin-bottom: 1.94rem;
 }
 
 .hero__features {
   margin-top: auto;
-  font-size: 16px;
+  font-size: 0.889rem;
   font-weight: bold;
 }
 
@@ -46,10 +46,10 @@
 }
 
 .hero__features-item {
-  margin-left: 35px;
-  padding-left: 15px;
+  margin-left: 1.94rem;
+  padding-left: 0.833rem;
   position: relative;
-  max-width: 90px;
+  max-width: 5rem;
   line-height: 1.3em;
 }
 
@@ -64,12 +64,12 @@ $list: design, materials, delivery;
     transform: translatey(-50%);
     background: url("../img/#{$var}-logo.png") center center no-repeat;
     background-size: contain;
-    height: 35px;
-    width: 35px;
+    height: 1.94rem;
+    width: 1.94rem;
     filter: invert(100%);
   }
 }
 
 .hero__button-container {
-  margin-bottom: 20px;
+  margin-bottom: 1.11rem;
 }

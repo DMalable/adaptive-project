@@ -1,11 +1,11 @@
 .radio {
   display: flex;
-  margin-right: 20px;
+  margin-right: 1.11rem;
   cursor: pointer;
   user-select: none;
 
   &:last-child {
-    margin-right: 0px;
+    margin-right: 0;
   }
 }
 
@@ -19,18 +19,18 @@
 
 .radio__visible {
   position: relative;
-  width: 25px;
-  height: 25px;
+  width: 1.39rem;
+  height: 1.39rem;
   background-color: #fff;
   border-radius: 50%;
-  margin-right: 10px;
+  margin-right: 0.556rem;
 
   &:before {
     display: none;
     content: "";
     position: absolute;
-    width: 13px;
-    height: 13px;
+    width: 0.722rem;
+    height: 0.722rem;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -40,11 +40,11 @@
 }
 
 .radio--checkbox .radio__visible {
-  border-radius: 4px;
+  border-radius: 0.222rem;
 
   &:before {
-    width: 20px;
-    height: 20px;
+    width: 1.11rem;
+    height: 1.11rem;
     background: url("../img/checked.png") center center no-repeat;
   }
 }

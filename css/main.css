@@ -3,20 +3,19 @@
 html,
 body {
   height: 100%;
+  font: 400 18px/1.42 "Alegreya Sans", Tahoma, sans-serif;
 }
 
 body {
-  font: 400 18px/1.42 "Alegreya Sans", Tahoma, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #fff;
-  margin: 0px;
-  background-color: #666;
+  margin: 0;
 }
 
 .wrapper {
   width: 100%;
-  min-width: 1120px;
+  min-width: 62.22rem;
   overflow: hidden;
   min-height: 100%;
   display: -webkit-box;
@@ -29,8 +28,8 @@ body {
 }
 
 .container {
-  width: 1100px;
-  margin: 0px auto;
+  width: 61.11rem;
+  margin: 0 auto;
   height: 100%;
 }
 
@@ -39,8 +38,8 @@ h1,
 h2,
 h3,
 h4 {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 
 * {
@@ -50,8 +49,8 @@ h4 {
 
 ul {
   list-style-type: none;
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 
 a,
@@ -70,10 +69,10 @@ a:visited {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 23px 80px 0px;
+  padding: 1.28rem 4.44rem 0;
   font-weight: bold;
   color: #fff;
-  margin-bottom: 100px;
+  margin-bottom: 5.56rem;
 }
 
 .header__col {
@@ -95,10 +94,10 @@ a:visited {
 }
 
 .menu__item {
-  margin-right: 22px;
+  margin-right: 1.22rem;
 }
 .menu__item:last-child {
-  margin-right: 0px;
+  margin-right: 0;
 }
 
 .logo__pic {
@@ -106,7 +105,7 @@ a:visited {
 }
 
 .contacts {
-  font-size: 22px;
+  font-size: 1.22rem;
   font-style: normal;
 }
 
@@ -115,18 +114,18 @@ a:visited {
   display: inline-block;
   background: url("../img/phone-logo.png") center center no-repeat;
   background-size: contain;
-  height: 14px;
-  width: 25px;
+  height: 0.778rem;
+  width: 1.39rem;
   -webkit-filter: invert(100%);
           filter: invert(100%);
 }
 
 .button {
   background-color: #fedb3f;
-  border-radius: 35px;
-  border-width: 0px;
-  padding: 21px 40px;
-  font-size: 16px;
+  border-radius: 1.94rem;
+  border-width: 0;
+  padding: 1.17rem 2.22rem;
+  font-size: 0.889rem;
   font-weight: 800;
   font-family: inherit;
   color: #000;
@@ -145,11 +144,11 @@ a:visited {
   background-color: transparent;
   text-transform: none;
   color: #fff;
-  border-width: 0px;
-  padding: 21px 20px;
+  border-width: 0;
+  padding: 1.17rem 1.11rem;
   font-family: inherit;
   font-weight: normal;
-  font-size: 18px;
+  font-size: 1rem;
   -webkit-transition: color 0.2s;
   transition: color 0.2s;
   cursor: pointer;
@@ -163,8 +162,10 @@ a:visited {
 
 .hero {
   height: 100vh;
-  min-height: 600px;
+  min-height: 33.33rem;
   color: #fff;
+  background: url("../img/bg-hero.png") center top no-repeat;
+  background-size: cover;
 }
 .hero__container {
   display: -webkit-box;
@@ -177,8 +178,6 @@ a:visited {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background: url("../img/bg-hero.png") center center no-repeat;
-  background-size: cover;
 }
 
 .hero__content {
@@ -192,27 +191,27 @@ a:visited {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 0px 0px 65px 80px;
+  padding: 0 0 3.61rem 4.44rem;
   max-width: 50%;
   min-height: 75vh;
 }
 
 .hero__title {
-  font-size: 48px;
+  font-size: 2.67rem;
   font-weight: bold;
   text-transform: uppercase;
   line-height: 1.25em;
-  margin-bottom: 13px;
+  margin-bottom: 0.722rem;
 }
 
 .hero__descr {
-  font-size: 21px;
-  margin-bottom: 35px;
+  font-size: 1.17rem;
+  margin-bottom: 1.94rem;
 }
 
 .hero__features {
   margin-top: auto;
-  font-size: 16px;
+  font-size: 0.889rem;
   font-weight: bold;
 }
 
@@ -226,10 +225,10 @@ a:visited {
 }
 
 .hero__features-item {
-  margin-left: 35px;
-  padding-left: 15px;
+  margin-left: 1.94rem;
+  padding-left: 0.833rem;
   position: relative;
-  max-width: 90px;
+  max-width: 5rem;
   line-height: 1.3em;
 }
 
@@ -242,8 +241,8 @@ a:visited {
           transform: translatey(-50%);
   background: url("../img/design-logo.png") center center no-repeat;
   background-size: contain;
-  height: 35px;
-  width: 35px;
+  height: 1.94rem;
+  width: 1.94rem;
   -webkit-filter: invert(100%);
           filter: invert(100%);
 }
@@ -257,8 +256,8 @@ a:visited {
           transform: translatey(-50%);
   background: url("../img/materials-logo.png") center center no-repeat;
   background-size: contain;
-  height: 35px;
-  width: 35px;
+  height: 1.94rem;
+  width: 1.94rem;
   -webkit-filter: invert(100%);
           filter: invert(100%);
 }
@@ -272,23 +271,22 @@ a:visited {
           transform: translatey(-50%);
   background: url("../img/delivery-logo.png") center center no-repeat;
   background-size: contain;
-  height: 35px;
-  width: 35px;
+  height: 1.94rem;
+  width: 1.94rem;
   -webkit-filter: invert(100%);
           filter: invert(100%);
 }
 
 .hero__button-container {
-  margin-bottom: 20px;
+  margin-bottom: 1.11rem;
 }
 
 .section {
   height: 100vh;
-  min-height: 600px;
+  min-height: 33.33rem;
   color: #292929;
 }
 .section .container {
-  background-color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -302,19 +300,19 @@ a:visited {
 }
 
 .section__title {
-  font-size: 48px;
+  font-size: 2.67rem;
   text-transform: uppercase;
   font-weight: bold;
   text-align: center;
-  margin-bottom: 25px;
+  margin-bottom: 1.39rem;
 }
 
 .headline {
-  margin-bottom: 50px;
+  margin-bottom: 2.78rem;
 }
 
 .headline__title {
-  margin-bottom: 10px;
+  margin-bottom: 0.556rem;
 }
 
 .headline__title-descr {
@@ -343,8 +341,8 @@ a:visited {
 }
 .advantages__item:after {
   position: absolute;
-  top: 59px;
-  right: 0px;
+  top: 3.277rem;
+  right: 0;
   content: url(../img/separator.png);
   -webkit-transform: translateX(50%);
           transform: translateX(50%);
@@ -366,14 +364,14 @@ a:visited {
           align-items: center;
 }
 .advantage:last-child {
-  margin-right: 0px;
+  margin-right: 0;
 }
 
 .advantage__pic {
   border-radius: 50%;
-  height: 128px;
-  width: 128px;
-  margin-bottom: 15px;
+  height: 7.11rem;
+  width: 7.11rem;
+  margin-bottom: 0.833rem;
 }
 
 .advantage__pic--icon--fit {
@@ -389,16 +387,16 @@ a:visited {
 }
 
 .advantage__title {
-  font-size: 27px;
+  font-size: 1.5rem;
   font-weight: bold;
-  margin-bottom: 15px;
+  margin-bottom: 0.833rem;
 }
 
 .advantage__text {
   font-weight: 300;
   color: #666;
   text-align: center;
-  max-width: 280px;
+  max-width: 15.56rem;
 }
 .advantage__text p {
   line-height: 1.2em;
@@ -411,15 +409,15 @@ a:visited {
   -webkit-box-pack: left;
       -ms-flex-pack: left;
           justify-content: left;
-  padding: 42px;
+  padding: 2.33rem;
   background-color: #f8faf9;
-  margin: 0px 80px 15px;
+  margin: 0 4.44rem 0.833rem;
 }
 
 .rewiews__avatar {
-  width: 253px;
-  height: 264px;
-  margin-right: 40px;
+  width: 14.06rem;
+  height: 14.66rem;
+  margin-right: 2.22rem;
 }
 
 .reviews__descr {
@@ -436,14 +434,14 @@ a:visited {
 }
 
 .rewiews__title {
-  font-size: 27px;
+  font-size: 1.5rem;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 0.556rem;
 }
 
 .rewiews__text {
   color: #666;
-  margin-bottom: 25px;
+  margin-bottom: 1.39rem;
   width: 85%;
   line-height: 1.2em;
 }
@@ -462,14 +460,14 @@ a:visited {
 }
 
 .interactive-avatar {
-  margin-right: 6px;
+  margin-right: 0.333rem;
   border-radius: 50%;
-  width: 74px;
-  height: 74px;
+  width: 4.11rem;
+  height: 4.11rem;
   overflow: hidden;
 }
 .interactive-avatar:last-child {
-  margin-right: 0px;
+  margin-right: 0;
 }
 
 .interactive-avatar__link {
@@ -482,13 +480,13 @@ a:visited {
 .interactive-avatar__item--active .interactive-avatar__link:after {
   content: "";
   position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   border-radius: 50%;
-  -webkit-box-shadow: inset 0px 0px 0px 6px #fedb3f;
-          box-shadow: inset 0px 0px 0px 6px #fedb3f;
+  -webkit-box-shadow: inset 0 0 0 0.333rem #fedb3f;
+          box-shadow: inset 0 0 0 0.333rem #fedb3f;
 }
 
 .interactive-avatar__icon {
@@ -501,9 +499,7 @@ a:visited {
 
 .order {
   color: #fff;
-}
-.order .container {
-  background: url("../img/bg-order.png") center center no-repeat;
+  background: url("../img/bg-order.png") center top no-repeat;
   background-size: cover;
 }
 
@@ -511,17 +507,17 @@ a:visited {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0px 82px;
+  margin: 0 4.56rem;
 }
 
 .form__col {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  margin-right: 10px;
+  margin-right: 0.556rem;
 }
 .form__col:last-child {
-  margin-right: 0px;
+  margin-right: 0;
 }
 
 .form__row {
@@ -531,25 +527,28 @@ a:visited {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  margin-bottom: 10px;
+  margin-bottom: 0.556rem;
+}
+.form__row:last-child {
+  margin-bottom: 0;
 }
 
 .form__block {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  margin-right: 15px;
+  margin-right: 0.833rem;
 }
 .form__block:last-child {
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 
 .form__input {
   width: 100%;
-  border: 3px solid transparent;
-  border-radius: 4px;
-  padding: 16px 10px;
-  font: 400 14px/1.42 "Open Sans", Tahoma, sans-serif;
+  border: 0.167rem solid transparent;
+  border-radius: 0.222rem;
+  padding: 0.889rem 0.556rem;
+  font: 400 0.778rem/1.42 "Open Sans", Tahoma, sans-serif;
 }
 .form__input:focus {
   outline: none;
@@ -557,9 +556,9 @@ a:visited {
 }
 
 .form__input--textarea {
-  height: 150px;
+  height: 8.33rem;
   resize: none;
-  margin-bottom: 20px;
+  margin-bottom: 1.11rem;
 }
 
 .form__controls {
@@ -568,18 +567,21 @@ a:visited {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-bottom: 20px;
+  margin-bottom: 1.11rem;
+}
+.form__controls:last-child {
+  margin-bottom: 0;
 }
 
 .form__controls--margin--big {
-  margin-bottom: 45px;
+  margin-bottom: 2.5rem;
 }
 
 .radio {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-right: 20px;
+  margin-right: 1.11rem;
   cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -587,7 +589,7 @@ a:visited {
           user-select: none;
 }
 .radio:last-child {
-  margin-right: 0px;
+  margin-right: 0;
 }
 
 .radio__elem {
@@ -599,18 +601,18 @@ a:visited {
 
 .radio__visible {
   position: relative;
-  width: 25px;
-  height: 25px;
+  width: 1.39rem;
+  height: 1.39rem;
   background-color: #fff;
   border-radius: 50%;
-  margin-right: 10px;
+  margin-right: 0.556rem;
 }
 .radio__visible:before {
   display: none;
   content: "";
   position: absolute;
-  width: 13px;
-  height: 13px;
+  width: 0.722rem;
+  height: 0.722rem;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -620,11 +622,11 @@ a:visited {
 }
 
 .radio--checkbox .radio__visible {
-  border-radius: 4px;
+  border-radius: 0.222rem;
 }
 .radio--checkbox .radio__visible:before {
-  width: 20px;
-  height: 20px;
+  width: 1.11rem;
+  height: 1.11rem;
   background: url("../img/checked.png") center center no-repeat;
 }
 
@@ -654,9 +656,9 @@ a:visited {
 
 .scroller__link {
   display: block;
-  height: 16px;
-  width: 16px;
-  padding: 4px;
+  height: 0.889rem;
+  width: 0.889rem;
+  padding: 0.222rem;
   background-color: #fff;
   border-radius: 50%;
   border: 1px solid transparent;
