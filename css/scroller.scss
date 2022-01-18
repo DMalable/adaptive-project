@@ -13,6 +13,7 @@
 
 .scroller__item--active .scroller__link {
   border-color: #fff;
+  transition: border-color 0.3s;
 }
 
 .scroller__link {
@@ -25,4 +26,10 @@
   border: 1px solid transparent;
   background-clip: content-box;
   cursor: pointer;
+  transition: border-color 0.3s;
+
+  &:hover {
+    border-color: #fff;
+    transition: border-color 0.3s;
+  }
 }
