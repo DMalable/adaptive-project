@@ -1,0 +1,45 @@
+.socials {
+  display: flex;
+  justify-content: space-between;
+  min-width: rem(122px);
+}
+
+.socials__pic {
+  width: rem(24px);
+  height: rem(24px);
+  background-image: url("../img/socials_sprites.png");
+  overflow: hidden;
+  transition: filter 0.2s;
+}
+
+.socials__pic--type--vk {
+  background-position: rem(-54px) rem(-48px);
+
+  &:hover {
+    filter: brightness(30%);
+  }
+}
+
+.socials__pic--type--fb {
+  background-position: rem(-10px) rem(-10px);
+
+  &:hover {
+    filter: brightness(30%);
+  }
+}
+
+.socials__pic--type--ig {
+  background-position: rem(-54px) rem(-10px);
+
+  &:hover {
+    filter: brightness(30%);
+  }
+}
+
+.socials__pic--type--tw {
+  background-position: rem(-10px) rem(-52px);
+
+  &:hover {
+    filter: brightness(30%);
+  }
+}

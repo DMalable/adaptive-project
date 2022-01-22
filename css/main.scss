@@ -1,8 +1,14 @@
-//var width
-$containerwidth: 61.11rem;
-//var colors
+//var
+$containerwidth: 1100px;
+$tabletwidth: 768px;
+$phonewidth: 480px;
+$basefontsize: 18px;
 $yellow: #fedb3f;
 $black: #292929;
+
+@function rem($px) {
+  @return $px / $basefontsize + 0rem;
+}
 
 //fonts and normalize
 @import url("fonts.css");
@@ -14,6 +20,7 @@ $black: #292929;
 @import "menu.scss";
 @import "logo.scss";
 @import "contacts.scss";
+@import "hamburger.scss";
 @import "button.scss";
 @import "hero.scss";
 @import "section.scss";
@@ -24,4 +31,10 @@ $black: #292929;
 @import "order.scss";
 @import "form.scss";
 @import "radio.scss";
+@import "map.scss";
+@import "footer.scss";
+@import "socials.scss";
 @import "scroller.scss";
+
+//media queries
+@import "media.scss";

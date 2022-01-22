@@ -1,8 +1,8 @@
 .interactive-avatar {
-  margin-right: 0.333rem;
+  margin-right: rem(6px);
   border-radius: 50%;
-  width: 4.11rem;
-  height: 4.11rem;
+  width: rem(74px);
+  height: rem(74px);
   overflow: hidden;
 
   &:last-child {
@@ -36,7 +36,7 @@
   bottom: 0;
   left: 0;
   border-radius: 50%;
-  box-shadow: inset 0 0 0 0.333rem $yellow;
+  box-shadow: inset 0 0 0 rem(6px) $yellow;
   opacity: 0;
   transition: opacity 0.15s;
 }

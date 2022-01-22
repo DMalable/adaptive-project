@@ -1,0 +1,23 @@
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 14%;
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 rem(80px) 0;
+  color: $black;
+  background-color: #fff;
+}
+
+.footer__col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer__contacts {
+  font-size: rem(21px);
+}

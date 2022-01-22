@@ -1,9 +1,9 @@
 .button {
   background-color: $yellow;
-  border-radius: 1.94rem;
+  border-radius: rem(35px);
   border-width: 0;
-  padding: 1.17rem 2.22rem;
-  font-size: 0.889rem;
+  padding: rem(21px) rem(40px);
+  font-size: rem(16px);
   font-weight: 800;
   font-family: inherit;
   color: #000;
@@ -22,10 +22,10 @@
   text-transform: none;
   color: #fff;
   border-width: 0;
-  padding: 1.17rem 1.11rem;
+  padding: rem(21px) rem(20px);
   font-family: inherit;
   font-weight: normal;
-  font-size: 1rem;
+  font-size: rem(18px);
   transition: color 0.2s;
   cursor: pointer;
 

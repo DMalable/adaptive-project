@@ -1,0 +1,308 @@
+@media (max-width: ($containerwidth - 10px)) {
+  html {
+    font-size: $basefontsize;
+  }
+
+  .container {
+    // width: 92%;
+    width: 99%;
+  }
+
+  .scroller,
+  .menu,
+  .header__contacts,
+  .hero__features {
+    display: none;
+  }
+
+  //hero section
+
+  .hero {
+    background: #1968b1 url("../img/bg-hero-768.png") center rem(90px) no-repeat;
+    background-size: cover;
+  }
+
+  .hero-container {
+    width: 92%;
+  }
+
+  .header {
+    width: 100%;
+    padding: rem(25px) 0 0;
+  }
+
+  .menu,
+  .header__contacts,
+  .hero__features {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .hero-container {
+    align-items: center;
+  }
+
+  .hero__content {
+    align-items: center;
+    padding: 0;
+    max-width: 100%;
+    justify-content: center;
+  }
+
+  .hero__title {
+    text-align: center;
+  }
+
+  .hero__descr {
+    text-align: center;
+  }
+
+  //why section
+  .headline__title-descr {
+    width: 57%;
+  }
+
+  .advantages {
+    justify-content: space-between;
+    padding: 0;
+  }
+
+  .advantages__item {
+    max-width: 32%;
+
+    &:after {
+      display: none;
+    }
+  }
+
+  //rewiew section
+  .rewiew-container {
+    width: 94%;
+  }
+
+  .rewiews__content {
+    flex-direction: column;
+    align-items: center;
+    margin: 0 0 rem(36px);
+    padding: rem(56px) rem(23px) rem(42px);
+    min-height: rem(418px);
+  }
+
+  .rewiews__avatar {
+    width: rem(130px);
+    height: rem(130px);
+    margin-right: 0;
+    margin-bottom: rem(32px);
+  }
+
+  .reviews__descr {
+    align-items: center;
+  }
+
+  .rewiews__text {
+    width: 100%;
+    text-align: center;
+  }
+
+  //order section
+  .order {
+    background-image: url("../img/bg-order-768.png");
+  }
+
+  .form {
+    flex-direction: column;
+    // align-items: center;
+    margin: 0 auto;
+    max-width: 63%;
+  }
+
+  .form__col {
+    margin-right: 0;
+
+    &:first-child {
+      margin-bottom: rem(10px);
+    }
+  }
+
+  .form__row {
+    margin-bottom: rem(14px);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .form__input {
+    height: rem(36px);
+    padding: rem(8px) rem(10px);
+  }
+
+  .form__input--textarea {
+    height: rem(82px);
+    margin-bottom: 5px;
+  }
+
+  .form__controls:last-child {
+    justify-content: center;
+  }
+
+  .form__controls--margin--big {
+    margin-bottom: rem(35px);
+  }
+  //map section
+  .map-container {
+    width: 100%;
+  }
+
+  .footer {
+    padding: 0 rem(30px) 0;
+  }
+}
+
+@media (max-width: ($tabletwidth - 10px)) {
+  html {
+    font-size: $basefontsize;
+  }
+
+  .container {
+    width: 95%;
+  }
+
+  .section__title {
+    font-size: rem(40px);
+  }
+
+  //hero section
+  .hero {
+    background: #1968b1 url("../img/bg-hero-480.png") center rem(90px) no-repeat;
+    background-size: cover;
+  }
+
+  .header {
+    margin-bottom: 13vh;
+  }
+
+  // .hero-container {
+  //   width: 95%;
+  // }
+
+  .hero__title {
+    font-size: rem(40px);
+    line-height: 0.9em;
+    margin-bottom: 10px;
+  }
+
+  .hero__descr,
+  .button {
+    font-size: rem(18px);
+  }
+
+  // //why section
+  // .why-container {
+  //   width: 95%;
+  // }
+
+  .headline__title {
+    margin-bottom: 0;
+  }
+
+  .headline__title-descr {
+    width: 95%;
+  }
+
+  .advantages {
+    flex-direction: column;
+  }
+
+  .advantages__item {
+    flex-direction: row;
+    max-width: 100%;
+    margin-bottom: 36px;
+  }
+
+  .advantage__pic {
+    margin-right: rem(12px);
+    margin-bottom: 0;
+  }
+
+  .advantage__title {
+    margin-bottom: rem(5px);
+  }
+
+  .advantage__text {
+    text-align: left;
+  }
+
+  // //rewiew section
+  // .rewiew-container {
+  //   width: 96%;
+  // }
+
+  .rewiews__content {
+    padding-bottom: 30px;
+    margin-bottom: 25px;
+  }
+
+  .rewiews__item {
+    width: rem(64px);
+    height: rem(64px);
+    margin-right: rem(10px);
+  }
+
+  .rewiews__text {
+    margin-bottom: 15px;
+  }
+
+  // order section
+  .form {
+    max-width: 100%;
+  }
+
+  .form__controls {
+    justify-content: center;
+  }
+
+  //map section
+
+  .map-container {
+    width: 100%;
+  }
+
+  .footer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.8em;
+    padding: 0;
+    height: 24%;
+  }
+
+  .footer__contacts {
+    display: block;
+    margin-bottom: rem(12px);
+
+    .contacts__tel {
+      display: block;
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: ($phonewidth - 10px)) {
+  html {
+    font-size: $basefontsize - 6px;
+  }
+
+  //section why
+  .advantages__item {
+    justify-content: center;
+  }
+
+  .socials__pic {
+    width: rem(24px);
+    height: rem(24px);
+  }
+}

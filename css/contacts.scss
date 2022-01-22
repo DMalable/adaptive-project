@@ -1,14 +1,17 @@
 .contacts {
-  font-size: 1.22rem;
+  font-size: rem(22px);
   font-style: normal;
 }
 
 .contacts__tel:before {
   content: "";
   display: inline-block;
-  background: url("../img/phone-logo.png") center center no-repeat;
+  background: url("../img/phone-logo.svg") center center no-repeat;
   background-size: contain;
-  height: 0.778rem;
-  width: 1.39rem;
+  height: 0.58em;
+  width: rem(25px);
+}
+
+.contacts__tel--color--white:before {
   filter: invert(100%);
 }

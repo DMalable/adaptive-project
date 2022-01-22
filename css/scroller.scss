@@ -1,6 +1,6 @@
 .scroller {
   position: fixed;
-  right: 17%;
+  right: 4%;
   top: 33%;
 }
 
@@ -18,9 +18,9 @@
 
 .scroller__link {
   display: block;
-  height: 0.889rem;
-  width: 0.889rem;
-  padding: 0.222rem;
+  height: rem(16px);
+  width: rem(16px);
+  padding: rem(4px);
   background-color: #fff;
   border-radius: 50%;
   border: 1px solid transparent;

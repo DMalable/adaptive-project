@@ -1,7 +1,7 @@
-html,
-body {
+html {
   height: 100%;
-  font: 400 18px/1.42 "Alegreya Sans", Tahoma, sans-serif;
+  font: 400 $basefontsize "Alegreya Sans", Tahoma, sans-serif;
+  line-height: 1.42;
 }
 
 body {
@@ -9,11 +9,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #fff;
   margin: 0;
+  height: 100%;
 }
 
 .wrapper {
   width: 100%;
-  min-width: $containerwidth + 1.11rem;
+  // min-width: $containerwidth + rem(20px);
   overflow: hidden;
   min-height: 100%;
   display: flex;
@@ -21,7 +22,8 @@ body {
 }
 
 .container {
-  width: $containerwidth;
+  width: 100%;
+  max-width: $containerwidth;
   margin: 0 auto;
   height: 100%;
 }

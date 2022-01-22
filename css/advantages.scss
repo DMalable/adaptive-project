@@ -11,7 +11,7 @@
   &:after {
     position: absolute;
     //half of icon height minus separator height
-    top: (7.11rem - 0.556rem) / 2;
+    top: (rem(128px) - rem(10px)) / 2;
     right: 0;
     content: url(../img/separator.png);
     transform: translateX(50%);
@@ -34,9 +34,9 @@
 
 .advantage__pic {
   border-radius: 50%;
-  height: 7.11rem;
-  width: 7.11rem;
-  margin-bottom: 0.833rem;
+  height: rem(128px);
+  width: rem(128px);
+  margin-bottom: rem(15px);
 }
 
 @each $advantage in (fit, strong, unique) {
@@ -46,18 +46,18 @@
 }
 
 .advantage__title {
-  font-size: 1.5rem;
+  font-size: rem(27px);
   font-weight: bold;
-  margin-bottom: 0.833rem;
+  margin-bottom: rem(15px);
 }
 
 .advantage__text {
   font-weight: 300;
-  color: #666;
   text-align: center;
-  max-width: 15.56rem;
+  max-width: rem(280px);
 
   p {
+    color: #666;
     line-height: 1.2em;
   }
 }

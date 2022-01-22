@@ -1,15 +1,15 @@
 .rewiews__content {
   display: flex;
   justify-content: left;
-  padding: 2.33rem;
+  padding: rem(42px);
   background-color: #f8faf9;
-  margin: 0 4.44rem 0.833rem;
+  margin: 0 rem(80px) rem(15px);
 }
 
 .rewiews__avatar {
-  width: 14.06rem;
-  height: 14.66rem;
-  margin-right: 2.22rem;
+  width: rem(253px);
+  height: rem(264px);
+  margin-right: rem(40px);
 }
 
 .reviews__descr {
@@ -19,14 +19,14 @@
 }
 
 .rewiews__title {
-  font-size: 1.5rem;
+  font-size: rem(27px);
   font-weight: bold;
-  margin-bottom: 0.556rem;
+  margin-bottom: rem(10px);
 }
 
 .rewiews__text {
   color: #666;
-  margin-bottom: 1.39rem;
+  margin-bottom: rem(25px);
   width: 85%;
   line-height: 1.2em;
 }
