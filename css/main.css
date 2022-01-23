@@ -125,6 +125,9 @@ a:visited {
 }
 
 .hamburger {
+  position: fixed;
+  top: 1.9444444444rem;
+  right: 4%;
   display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -133,14 +136,14 @@ a:visited {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 26px;
-  height: 24px;
+  width: 1.4444444444rem;
+  height: 1.3333333333rem;
 }
 
 .hamburger__plank {
   height: 4.5px;
   background-color: #fff;
-  border-radius: 20px;
+  border-radius: 1.1111111111rem;
 }
 
 .button {
@@ -262,7 +265,7 @@ a:visited {
   fill: #fff;
   height: 2.6666666667rem;
   width: 2.6666666667rem;
-  margin-right: 10px;
+  margin-right: 0.5555555556rem;
 }
 .hero__features-pic:last-child {
   margin-right: 0;
@@ -651,6 +654,7 @@ a:visited {
 .map {
   position: relative;
   height: 100vh;
+  min-height: 33.3333333333rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -680,6 +684,7 @@ a:visited {
   left: 0;
   right: 0;
   height: 14%;
+  max-height: 8.3333333333rem;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -941,7 +946,7 @@ a:visited {
 
   .form__input--textarea {
     height: 4.5555555556rem;
-    margin-bottom: 5px;
+    margin-bottom: 0.2777777778rem;
   }
 
   .form__controls:last-child {
@@ -987,7 +992,7 @@ a:visited {
   .hero__title {
     font-size: 2.2222222222rem;
     line-height: 0.9em;
-    margin-bottom: 10px;
+    margin-bottom: 0.5555555556rem;
   }
 
   .hero__descr,
@@ -1016,7 +1021,10 @@ a:visited {
         -ms-flex-direction: row;
             flex-direction: row;
     max-width: 100%;
-    margin-bottom: 36px;
+    margin-bottom: 2rem;
+  }
+  .advantages__item:last-child {
+    margin-bottom: 0;
   }
 
   .advantage__pic {
@@ -1033,8 +1041,8 @@ a:visited {
   }
 
   .rewiews__content {
-    padding-bottom: 30px;
-    margin-bottom: 25px;
+    padding-bottom: 1.6666666667rem;
+    margin-bottom: 1.3888888889rem;
   }
 
   .rewiews__item {
@@ -1044,7 +1052,7 @@ a:visited {
   }
 
   .rewiews__text {
-    margin-bottom: 15px;
+    margin-bottom: 0.8333333333rem;
   }
 
   .form {

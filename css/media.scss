@@ -142,7 +142,7 @@
 
   .form__input--textarea {
     height: rem(82px);
-    margin-bottom: 5px;
+    margin-bottom: rem(5px);
   }
 
   .form__controls:last-child {
@@ -192,7 +192,7 @@
   .hero__title {
     font-size: rem(40px);
     line-height: 0.9em;
-    margin-bottom: 10px;
+    margin-bottom: rem(10px);
   }
 
   .hero__descr,
@@ -220,7 +220,11 @@
   .advantages__item {
     flex-direction: row;
     max-width: 100%;
-    margin-bottom: 36px;
+    margin-bottom: rem(36px);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   .advantage__pic {
@@ -242,8 +246,8 @@
   // }
 
   .rewiews__content {
-    padding-bottom: 30px;
-    margin-bottom: 25px;
+    padding-bottom: rem(30px);
+    margin-bottom: rem(25px);
   }
 
   .rewiews__item {
@@ -253,7 +257,7 @@
   }
 
   .rewiews__text {
-    margin-bottom: 15px;
+    margin-bottom: rem(15px);
   }
 
   // order section
