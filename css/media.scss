@@ -9,7 +9,7 @@
   }
 
   .scroller,
-  .menu,
+  .header .menu,
   .header__contacts,
   .hero__features {
     display: none;
@@ -29,12 +29,6 @@
   .header {
     width: 100%;
     padding: rem(25px) 0 0;
-  }
-
-  .menu,
-  .header__contacts,
-  .hero__features {
-    display: none;
   }
 
   .hamburger {
@@ -78,6 +72,52 @@
     }
   }
 
+  //catalog section
+  .surfboard {
+    flex-direction: column;
+    align-items: center;
+    padding-top: rem(30px);
+  }
+
+  .surfboard__pic {
+    background: url(../img/longboard.png) center center no-repeat, url(../img/bg-surfboard.svg) center 65% no-repeat;
+    background-size: contain;
+    min-height: rem(415px);
+    width: 56%;
+  }
+
+  .slider__arrow-link {
+    transform: translate(90px, -150px);
+
+    &--right {
+      transform: translate(-90px, -150px);
+    }
+  }
+  .surfboard__topline {
+    display: none;
+  }
+
+  .surfboard__info {
+    align-items: center;
+    padding: 0 rem(20px);
+  }
+
+  .surfboard__title {
+    font-size: rem(30px);
+    line-height: 1.1em;
+  }
+
+  .surfboard__descr {
+    text-align: center;
+  }
+
+  .surfboard__size-item:first-child {
+    margin-left: 20px;
+  }
+
+  .surfboard__bottomline {
+    max-width: rem(350px);
+  }
   //rewiew section
   .rewiew-container {
     width: 94%;
@@ -185,9 +225,13 @@
     margin-bottom: 13vh;
   }
 
-  // .hero-container {
-  //   width: 95%;
-  // }
+  .fullscreen-menu {
+    justify-content: center;
+  }
+
+  .menu--vertical .menu__list {
+    margin-top: 0;
+  }
 
   .hero__title {
     font-size: rem(40px);
@@ -199,11 +243,6 @@
   .button {
     font-size: rem(18px);
   }
-
-  // //why section
-  // .why-container {
-  //   width: 95%;
-  // }
 
   .headline__title {
     margin-bottom: 0;
@@ -250,6 +289,10 @@
     margin-bottom: rem(25px);
   }
 
+  .slider__arrow-link {
+    transform: translate(0, -180px);
+  }
+
   .rewiews__item {
     width: rem(64px);
     height: rem(64px);
@@ -260,6 +303,26 @@
     margin-bottom: rem(15px);
   }
 
+  //catalog section
+  .catalog .slider {
+    padding: 0;
+  }
+
+  .surfboard__pic {
+    background: url(../img/longboard.png) center center no-repeat, url(../img/bg-surfboard.svg) center 65% no-repeat;
+    background-size: contain;
+    min-height: rem(340px);
+    width: 64%;
+    margin-bottom: 35px;
+  }
+
+  .surfboard__info {
+    padding: 0 rem(10px);
+  }
+
+  .surfboard__descr {
+    line-height: 1.2em;
+  }
   // order section
   .form {
     max-width: 100%;

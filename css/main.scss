@@ -26,6 +26,10 @@ $black: #292929;
 @import "section.scss";
 @import "headline.scss";
 @import "advantages.scss";
+@import "catalog.scss";
+@import "dropdown.scss";
+@import "slider.scss";
+@import "surfboard.scss";
 @import "rewiews.scss";
 @import "interactive-avatar.scss";
 @import "order.scss";
@@ -35,6 +39,7 @@ $black: #292929;
 @import "footer.scss";
 @import "socials.scss";
 @import "scroller.scss";
+@import "fullscreen-menu.scss";
 
 //media queries
 @import "media.scss";

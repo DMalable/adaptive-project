@@ -10,3 +10,18 @@
     margin-right: 0;
   }
 }
+
+.menu--vertical {
+  .menu__list {
+    flex-direction: column;
+    align-items: center;
+    font-size: rem(36px);
+    color: #fff;
+    line-height: rem(72px);
+    margin-top: 14vh;
+  }
+
+  .menu__item {
+    margin-right: 0;
+  }
+}

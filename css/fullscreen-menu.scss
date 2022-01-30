@@ -1,0 +1,46 @@
+.fullscreen-menu {
+  // visibility: hidden;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  width: 100vw;
+  height: 100vh;
+  min-height: 600px;
+  top: 0;
+  left: 100%;
+  background-color: #666;
+  opacity: 0;
+  transition: left 0.5s, opacity 0.5s;
+
+  &--active {
+    // visibility: visible;
+    opacity: 1;
+    left: 0;
+  }
+}
+
+.fullscreen-menu__close {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  top: rem(42px);
+  right: rem(42px);
+  width: 26px;
+  height: 26px;
+
+  &-line {
+    height: 4.5px;
+    background-color: #fff;
+    border-radius: 20px;
+
+    &:first-child {
+      transform: translateY(11px) rotate(45deg);
+    }
+
+    &:last-child {
+      transform: translateY(-10px) rotate(-45deg);
+    }
+  }
+}
