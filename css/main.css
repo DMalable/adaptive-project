@@ -429,6 +429,8 @@ a:visited {
   -webkit-box-shadow: 4px 4px 40px rgba(0, 0, 0, 0.06);
           box-shadow: 4px 4px 40px rgba(0, 0, 0, 0.06);
   border-radius: 4px;
+  -webkit-backdrop-filter: blur(40px);
+          backdrop-filter: blur(40px);
 }
 .dropdown::before {
   content: "";
@@ -460,6 +462,12 @@ a:visited {
 .dropdown__parameter {
   font-weight: 500;
   line-height: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .dropdown__item--length .dropdown__parameter:before {
@@ -507,7 +515,10 @@ a:visited {
   margin-right: 10px;
 }
 
-.catalog .slider {
+.slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -564,7 +575,8 @@ a:visited {
 }
 
 .surfboard__pic {
-  background: url(../img/longboard.png) center -10% no-repeat, url(../img/bg-surfboard.svg) center 32% no-repeat;
+  background: url(../img/longboard.png) center -10% no-repeat, url(../img/bg-surfboard.png) center 63% no-repeat;
+  background-size: contain, auto 68%;
   min-height: 36.1111111111rem;
   width: 56%;
 }
@@ -683,6 +695,93 @@ a:visited {
 }
 .surfboard__prise-currency {
   font-size: 2.2222222222rem;
+}
+
+.team__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.employee {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 12.2222222222rem;
+  text-align: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.employee__name {
+  position: relative;
+  font-size: 1.1666666667rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+.employee__name::after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 2px);
+  right: -13px;
+  border: 4px solid transparent;
+  border-top: 7px solid black;
+  -webkit-transform: translateY(-5px) rotate(180deg);
+          transform: translateY(-5px) rotate(180deg);
+}
+
+.employee__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0;
+  height: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  overflow: hidden;
+}
+
+.employee__name--active::after {
+  -webkit-transform: translateY(0) rotate(0);
+          transform: translateY(0) rotate(0);
+}
+.employee__name--active + .employee__info {
+  opacity: 1;
+  height: 100px;
+}
+
+.employee__avatar {
+  display: block;
+  max-width: 16.1111111111rem;
+}
+.employee__avatar--tablet {
+  display: none;
+}
+
+.employee__responsibility {
+  font-weight: 300;
+  color: #666;
 }
 
 .rewiews__content {
@@ -1225,8 +1324,8 @@ a:visited {
   }
 
   .surfboard__pic {
-    background: url(../img/longboard.png) center center no-repeat, url(../img/bg-surfboard.svg) center 65% no-repeat;
-    background-size: contain;
+    background: url(../img/longboard.png) center center no-repeat, url(../img/bg-surfboard.png) center 65% no-repeat;
+    background-size: contain, auto 68%;
     min-height: 23.0555555556rem;
     width: 56%;
   }
@@ -1266,6 +1365,28 @@ a:visited {
 
   .surfboard__bottomline {
     max-width: 19.4444444444rem;
+  }
+
+  .team__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .employee__avatar {
+    display: none;
+  }
+  .employee__avatar--tablet {
+    display: block;
+  }
+
+  .employee__name--active + .employee__info {
+    opacity: 1;
+    height: 380px;
   }
 
   .rewiew-container {
@@ -1441,14 +1562,18 @@ a:visited {
     text-align: left;
   }
 
+  .employee__avatar {
+    max-width: 7.7777777778rem;
+  }
+
   .rewiews__content {
     padding-bottom: 1.6666666667rem;
     margin-bottom: 1.3888888889rem;
   }
 
   .slider__arrow-link {
-    -webkit-transform: translate(0, -180px);
-            transform: translate(0, -180px);
+    -webkit-transform: translate(0, -10rem);
+            transform: translate(0, -10rem);
   }
 
   .rewiews__item {
@@ -1466,8 +1591,8 @@ a:visited {
   }
 
   .surfboard__pic {
-    background: url(../img/longboard.png) center center no-repeat, url(../img/bg-surfboard.svg) center 65% no-repeat;
-    background-size: contain;
+    background: url(../img/longboard.png) center center no-repeat, url(../img/bg-surfboard.png) center 65% no-repeat;
+    background-size: contain, auto 68%;
     min-height: 18.8888888889rem;
     width: 64%;
     margin-bottom: 35px;

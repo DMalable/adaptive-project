@@ -4,6 +4,7 @@
   background: rgba(255, 255, 255, 0.8);
   box-shadow: 4px 4px 40px rgba(0, 0, 0, 0.06);
   border-radius: 4px;
+  backdrop-filter: blur(40px);
 
   &::before {
     content: "";
@@ -32,6 +33,8 @@
 .dropdown__parameter {
   font-weight: 500;
   line-height: 1em;
+  display: flex;
+  align-items: center;
 }
 
 @each $param in (length, width, thickness, lifetime, weight) {

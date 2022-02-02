@@ -80,8 +80,8 @@
   }
 
   .surfboard__pic {
-    background: url(../img/longboard.png) center center no-repeat, url(../img/bg-surfboard.svg) center 65% no-repeat;
-    background-size: contain;
+    background: url(../img/longboard.png) center center no-repeat, url(../img/bg-surfboard.png) center 65% no-repeat;
+    background-size: contain, auto 68%;
     min-height: rem(415px);
     width: 56%;
   }
@@ -118,6 +118,26 @@
   .surfboard__bottomline {
     max-width: rem(350px);
   }
+
+  //team section
+  .team__list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .employee__avatar {
+    display: none;
+
+    &--tablet {
+      display: block;
+    }
+  }
+
+  .employee__name--active + .employee__info {
+    opacity: 1;
+    height: 380px;
+  }
+
   //rewiew section
   .rewiew-container {
     width: 94%;
@@ -279,18 +299,19 @@
     text-align: left;
   }
 
-  // //rewiew section
-  // .rewiew-container {
-  //   width: 96%;
-  // }
+  //team section
+  .employee__avatar {
+    max-width: rem(140px);
+  }
 
+  //rewiew section
   .rewiews__content {
     padding-bottom: rem(30px);
     margin-bottom: rem(25px);
   }
 
   .slider__arrow-link {
-    transform: translate(0, -180px);
+    transform: translate(0, rem(-180px));
   }
 
   .rewiews__item {
@@ -309,8 +330,8 @@
   }
 
   .surfboard__pic {
-    background: url(../img/longboard.png) center center no-repeat, url(../img/bg-surfboard.svg) center 65% no-repeat;
-    background-size: contain;
+    background: url(../img/longboard.png) center center no-repeat, url(../img/bg-surfboard.png) center 65% no-repeat;
+    background-size: contain, auto 68%;
     min-height: rem(340px);
     width: 64%;
     margin-bottom: 35px;
