@@ -6,10 +6,19 @@
 }
 
 .surfboard__pic {
-  background: url(../img/longboard.png) center -10% no-repeat, url(../img/bg-surfboard.png) center 63% no-repeat;
-  background-size: contain, auto 68%;
   min-height: rem(650px);
   width: 56%;
+  background-position: center -10%, center 65%;
+  background-repeat: no-repeat;
+  background-size: contain, auto 68%;
+}
+
+.surfboard--type--long .surfboard__pic {
+  background-image: url(../img/longboard.png), url(../img/bg-surfboard.png);
+}
+
+.surfboard--type--short .surfboard__pic {
+  background-image: url(../img/shortboard.png), url(../img/bg-surfboard.png);
 }
 
 .surfboard__info {

@@ -80,10 +80,8 @@
   }
 
   .surfboard__pic {
-    background: url(../img/longboard.png) center center no-repeat, url(../img/bg-surfboard.png) center 65% no-repeat;
-    background-size: contain, auto 68%;
+    background-position: center center, center 65%;
     min-height: rem(415px);
-    width: 56%;
   }
 
   .slider__arrow-link {
@@ -330,8 +328,6 @@
   }
 
   .surfboard__pic {
-    background: url(../img/longboard.png) center center no-repeat, url(../img/bg-surfboard.png) center 65% no-repeat;
-    background-size: contain, auto 68%;
     min-height: rem(340px);
     width: 64%;
     margin-bottom: 35px;

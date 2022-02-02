@@ -575,10 +575,19 @@ a:visited {
 }
 
 .surfboard__pic {
-  background: url(../img/longboard.png) center -10% no-repeat, url(../img/bg-surfboard.png) center 63% no-repeat;
-  background-size: contain, auto 68%;
   min-height: 36.1111111111rem;
   width: 56%;
+  background-position: center -10%, center 65%;
+  background-repeat: no-repeat;
+  background-size: contain, auto 68%;
+}
+
+.surfboard--type--long .surfboard__pic {
+  background-image: url(../img/longboard.png), url(../img/bg-surfboard.png);
+}
+
+.surfboard--type--short .surfboard__pic {
+  background-image: url(../img/shortboard.png), url(../img/bg-surfboard.png);
 }
 
 .surfboard__info {
@@ -1324,10 +1333,8 @@ a:visited {
   }
 
   .surfboard__pic {
-    background: url(../img/longboard.png) center center no-repeat, url(../img/bg-surfboard.png) center 65% no-repeat;
-    background-size: contain, auto 68%;
+    background-position: center center, center 65%;
     min-height: 23.0555555556rem;
-    width: 56%;
   }
 
   .slider__arrow-link {
@@ -1591,8 +1598,6 @@ a:visited {
   }
 
   .surfboard__pic {
-    background: url(../img/longboard.png) center center no-repeat, url(../img/bg-surfboard.png) center 65% no-repeat;
-    background-size: contain, auto 68%;
     min-height: 18.8888888889rem;
     width: 64%;
     margin-bottom: 35px;
