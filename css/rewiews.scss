@@ -1,9 +1,25 @@
-.rewiews__content {
+.rewiews__list {
+  position: relative;
+  min-height: 300px;
+  margin: 0 rem(80px) rem(15px);
+}
+
+.rewiews__item {
   display: flex;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
   justify-content: left;
   padding: rem(42px);
   background-color: #f8faf9;
-  margin: 0 rem(80px) rem(15px);
+  opacity: 0;
+}
+
+.rewiews__item--active {
+  position: static;
+  opacity: 1;
 }
 
 .rewiews__avatar {
@@ -35,7 +51,7 @@
   font-weight: 500;
 }
 
-.rewiews__list {
+.rewiews__switcher-list {
   display: flex;
   justify-content: center;
 }

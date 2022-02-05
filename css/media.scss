@@ -121,6 +121,17 @@
   .team__list {
     flex-direction: column;
     align-items: center;
+    justify-content: flex-start;
+    min-height: rem(520px);
+  }
+
+  .employee {
+    min-height: 0;
+    margin-bottom: rem(10px);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   .employee__avatar {
@@ -133,7 +144,8 @@
 
   .employee__name--active + .employee__info {
     opacity: 1;
-    height: 380px;
+    //height changes by js
+    // height: rem(380px);
   }
 
   //rewiew section
@@ -141,7 +153,7 @@
     width: 94%;
   }
 
-  .rewiews__content {
+  .rewiews__item {
     flex-direction: column;
     align-items: center;
     margin: 0 0 3.6vh; //rem(36px);
@@ -158,11 +170,12 @@
 
   .reviews__descr {
     align-items: center;
+    text-align: center;
   }
 
   .rewiews__text {
     width: 100%;
-    text-align: center;
+    // text-align: center;
   }
 
   //order section
@@ -297,22 +310,42 @@
     text-align: left;
   }
 
+  //catalog section
+  .slider__arrow {
+    position: absolute;
+    top: rem(200px);
+    &:first-child {
+      left: 0;
+    }
+    &:last-child {
+      right: 0;
+    }
+  }
+
+  .slider__arrow-link {
+    transform: translate(0, 0);
+  }
+
   //team section
   .employee__avatar {
     max-width: rem(140px);
   }
+  //height changes by js
+  // .employee__name--active + .employee__info {
+  //   height: rem(270px);
+  // }
 
   //rewiew section
-  .rewiews__content {
+  .rewiews__item {
     padding-bottom: rem(30px);
     margin-bottom: rem(25px);
   }
 
-  .slider__arrow-link {
-    transform: translate(0, rem(-180px));
+  .interactive-avatar__link:after {
+    box-shadow: inset 0 0 0 rem(4px) $yellow;
   }
 
-  .rewiews__item {
+  .rewiews__switcher-item {
     width: rem(64px);
     height: rem(64px);
     margin-right: rem(10px);

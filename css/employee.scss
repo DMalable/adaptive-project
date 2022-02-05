@@ -5,6 +5,7 @@
   max-width: rem(220px);
   text-align: center;
   user-select: none;
+  min-height: 400px;
 }
 
 .employee__name {
@@ -25,13 +26,17 @@
 }
 
 .employee__info {
+  opacity: 0;
+  //height changes by js
+  height: 0;
+  transition: 0.3s;
+  overflow: hidden;
+}
+
+.employee__info-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  opacity: 0;
-  height: 0;
-  transition: 0.5s;
-  overflow: hidden;
 }
 
 .employee__name--active {
@@ -41,7 +46,7 @@
 
   & + .employee__info {
     opacity: 1;
-    height: 100px;
+    //height changes by js
   }
 }
 
