@@ -106,11 +106,13 @@ $(window).on("load", () => {
 
   const orderForm = document.querySelector(".form");
   const sendButton = document.querySelector(".form-button");
+  const sendStatus = orderForm.elements.status;
 
   sendButton.addEventListener("click", (e) => {
     e.preventDefault();
 
     let messageText = "";
+
     if (validateForm(orderForm)) {
       //request if form is valid
       const data = {
@@ -132,28 +134,31 @@ $(window).on("load", () => {
       xhr.open("POST", "https://webdev-api.loftschool.com/sendmail");
       xhr.setRequestHeader("content-type", "application/json");
       xhr.send(JSON.stringify(data));
-
       xhr.addEventListener("load", () => {
         let modalTextBlock = document.querySelector(".modal__window-message");
 
-        // console.log(xhr);
-        //if (xhr.response.status) {
+        sendStatus.value = xhr.response.status;
         messageText = xhr.response.message;
-
         modalTextBlock.textContent = messageText;
       });
     } else {
       messageText = 'Заполните поля "Имя", "Телефон" и "Комментарий"';
-      // console.log(messageText);
     }
 
     function validateForm(form) {
-      const isValidName = form.elements.firstName.checkValidity();
-      const isValidTel = form.elements.phone.checkValidity();
-      const isValidComment = form.elements.comment.checkValidity();
-      const isValidTo = form.elements.to.checkValidity();
-
-      return isValidName && isValidTel && isValidComment && isValidTo;
+      const name = form.elements.firstName;
+      const tel = form.elements.phone;
+      const comment = form.elements.comment;
+      const to = form.elements.to;
+      let resultValid = true;
+      [name, tel, comment, to].forEach((item) => {
+        resultValid = resultValid && item.checkValidity();
+        item.classList.remove("form__input--error");
+        if (!item.checkValidity()) {
+          item.classList.add("form__input--error");
+        }
+      });
+      return resultValid;
     }
 
     const modal = document.querySelector(".modal");
@@ -167,7 +172,10 @@ $(window).on("load", () => {
       e.preventDefault();
       body.style.overflow = "visible";
       modal.classList.remove("modal--active");
-      orderForm.reset();
+
+      if (sendStatus.value === "1") {
+        orderForm.reset();
+      }
     });
   });
 });
