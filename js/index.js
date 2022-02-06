@@ -117,7 +117,7 @@ $(window).on("load", () => {
         name: orderForm.elements.firstName.value,
         phone: orderForm.elements.phone.value,
         comment: orderForm.elements.comment.value,
-        to: "test@mail.ru",
+        to: orderForm.elements.to.value,
         street: orderForm.elements.street.value,
         house: orderForm.elements.house.value,
         building: orderForm.elements.building.value,
@@ -136,25 +136,24 @@ $(window).on("load", () => {
       xhr.addEventListener("load", () => {
         let modalTextBlock = document.querySelector(".modal__window-message");
 
-        console.log(xhr);
-        if (xhr.response.status) {
-          messageText = "Данные успешно отправлены";
-        } else {
-          messageText = "Произошла ошибка. Попробуйте еще раз";
-        }
+        // console.log(xhr);
+        //if (xhr.response.status) {
+        messageText = xhr.response.message;
+
         modalTextBlock.textContent = messageText;
       });
     } else {
       messageText = 'Заполните поля "Имя", "Телефон" и "Комментарий"';
-      console.log(messageText);
+      // console.log(messageText);
     }
 
     function validateForm(form) {
       const isValidName = form.elements.firstName.checkValidity();
       const isValidTel = form.elements.phone.checkValidity();
       const isValidComment = form.elements.comment.checkValidity();
+      const isValidTo = form.elements.to.checkValidity();
 
-      return isValidName && isValidTel && isValidComment;
+      return isValidName && isValidTel && isValidComment && isValidTo;
     }
 
     const modal = document.querySelector(".modal");

@@ -45,6 +45,10 @@
   }
 }
 
+.form__input--error {
+  border-color: $yellow;
+}
+
 .form__input--textarea {
   height: rem(150px);
   resize: none;
