@@ -1,3 +1,5 @@
+//fullscreen menu with hamburger ------------------------------------
+
 const fullscreenMenu = document.querySelector(".fullscreen-menu");
 const hamburger = document.querySelector(".hamburger");
 const closeSign = document.querySelector(".fullscreen-menu__close");
@@ -24,6 +26,7 @@ $(window).on("load", () => {
     })
   );
 
+  //catalog section ------------------------------------------------
   // part with using jQuerry
 
   // plugin slider
@@ -79,6 +82,8 @@ $(window).on("load", () => {
     // console.log(textBlock.height(reqHeight));
   });
 
+  //review section -------------------------------------------------
+
   $(".interactive-avatar__link").on("click", (e) => {
     e.preventDefault();
     const $this = $(e.currentTarget);
@@ -95,5 +100,75 @@ $(window).on("load", () => {
       .addClass("rewiews__item--active")
       .siblings()
       .removeClass("rewiews__item--active");
+  });
+
+  // form section -----------------------------------------------
+
+  const orderForm = document.querySelector(".form");
+  const sendButton = document.querySelector(".form-button");
+
+  sendButton.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    let messageText = "";
+    if (validateForm(orderForm)) {
+      //request if form is valid
+      const data = {
+        name: orderForm.elements.firstName.value,
+        phone: orderForm.elements.phone.value,
+        comment: orderForm.elements.comment.value,
+        to: "test@mail.ru",
+        street: orderForm.elements.street.value,
+        house: orderForm.elements.house.value,
+        building: orderForm.elements.building.value,
+        flat: orderForm.elements.flat.value,
+        floor: orderForm.elements.floor.value,
+        cash: orderForm.elements.payment[0].checked,
+        card: orderForm.elements.payment[1].checked,
+        call: orderForm.elements.call_option.checked,
+      };
+      const xhr = new XMLHttpRequest();
+      xhr.responseType = "json";
+      xhr.open("POST", "https://webdev-api.loftschool.com/sendmail");
+      xhr.setRequestHeader("content-type", "application/json");
+      xhr.send(JSON.stringify(data));
+
+      xhr.addEventListener("load", () => {
+        let modalTextBlock = document.querySelector(".modal__window-message");
+
+        console.log(xhr);
+        if (xhr.response.status) {
+          messageText = "Данные успешно отправлены";
+        } else {
+          messageText = "Произошла ошибка. Попробуйте еще раз";
+        }
+        modalTextBlock.textContent = messageText;
+      });
+    } else {
+      messageText = 'Заполните поля "Имя", "Телефон" и "Комментарий"';
+      console.log(messageText);
+    }
+
+    function validateForm(form) {
+      const isValidName = form.elements.firstName.checkValidity();
+      const isValidTel = form.elements.phone.checkValidity();
+      const isValidComment = form.elements.comment.checkValidity();
+
+      return isValidName && isValidTel && isValidComment;
+    }
+
+    const modal = document.querySelector(".modal");
+    let modalTextBlock = document.querySelector(".modal__window-message");
+    modalTextBlock.textContent = messageText;
+    body.style.overflow = "hidden";
+    modal.classList.add("modal--active");
+
+    const modalButton = document.querySelector(".modal__window-button");
+    modalButton.addEventListener("click", (e) => {
+      e.preventDefault();
+      body.style.overflow = "visible";
+      modal.classList.remove("modal--active");
+      orderForm.reset();
+    });
   });
 });

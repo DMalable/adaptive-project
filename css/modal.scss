@@ -1,0 +1,32 @@
+.modal {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 100%;
+  background-color: rgba(49, 49, 49, 0.9);
+  opacity: 0;
+  transition: opacity 0.3s;
+
+  &--active {
+    opacity: 1;
+    left: 0;
+  }
+}
+.modal__window {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  padding: rem(37px);
+}
+
+.modal__window-message {
+  margin-bottom: rem(16px);
+  font-weight: 500;
+}

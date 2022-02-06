@@ -388,35 +388,35 @@
                   <div class="form__row">
                     <label class="form__block">
                       <div class="form__title">Имя</div>
-                      <input class="form__input" type="text" />
+                      <input class="form__input" type="text" name="firstName" required />
                     </label>
                     <label class="form__block">
                       <div class="form__title">Телефон</div>
-                      <input class="form__input" type="tel" />
+                      <input class="form__input" type="tel" name="phone" required />
                     </label>
                   </div>
                   <div class="form__row">
                     <label class="form__block">
                       <div class="form__title">Улица</div>
-                      <input class="form__input" type="text" />
+                      <input class="form__input" type="text" name="street" />
                     </label>
                   </div>
                   <div class="form__row">
                     <label class="form__block">
                       <div class="form__title">Дом</div>
-                      <input class="form__input" type="text" />
+                      <input class="form__input" type="text" name="house" />
                     </label>
                     <label class="form__block">
                       <div class="form__title">Корпус</div>
-                      <input class="form__input" type="text" />
+                      <input class="form__input" type="text" name="building" />
                     </label>
                     <label class="form__block">
                       <div class="form__title">Квартира</div>
-                      <input class="form__input" type="text" />
+                      <input class="form__input" type="text" name="flat" />
                     </label>
                     <label class="form__block">
                       <div class="form__title">Этаж</div>
-                      <input class="form__input" type="text" />
+                      <input class="form__input" type="text" name="floor" />
                     </label>
                   </div>
                 </div>
@@ -424,7 +424,7 @@
                   <div class="form__row">
                     <label class="form__block">
                       <div class="form__title">Комментарий</div>
-                      <textarea class="form__input form__input--textarea" name="" id=""></textarea>
+                      <textarea class="form__input form__input--textarea" name="comment" required></textarea>
                     </label>
                   </div>
                   <div class="form__controls">
@@ -441,13 +441,13 @@
                   </div>
                   <div class="form__controls form__controls--margin--big">
                     <label class="radio radio--checkbox">
-                      <input class="radio__elem" name="option" type="checkbox" />
+                      <input class="radio__elem" name="call_option" type="checkbox" />
                       <div class="radio__visible"></div>
                       <div class="radio__title">Не перезванивать</div>
                     </label>
                   </div>
                   <div class="form__controls">
-                    <button class="button" type="submit">Заказать</button>
+                    <button class="button form-button" type="submit">Заказать</button>
                     <button class="button button--type--reset" type="reset">Очистить</button>
                   </div>
                 </div>
@@ -544,6 +544,15 @@
           <li class="menu__item"><a href="#page9" class="menu__link">Контакты</a></li>
         </ul>
       </nav>
+    </div>
+
+    <div class="modal">
+      <div class="modal__window">
+        <div class="modal__window-message">Тестовый текст</div>
+        <div class="button-container">
+          <button class="modal__window-button button">Закрыть</button>
+        </div>
+      </div>
     </div>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
