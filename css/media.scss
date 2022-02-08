@@ -18,8 +18,8 @@
   //hero section
 
   .hero {
-    background: #1968b1 url("../img/bg-hero-768.png") center rem(90px) no-repeat;
-    background-size: cover;
+    background: #1968b1 url("../img/bg-hero-768.png") center rem(90px) / cover no-repeat;
+    // background-size: cover;
   }
 
   .hero-container {
@@ -148,6 +148,23 @@
     // height: rem(380px);
   }
 
+  //menu-section
+  .menu-section__title {
+    margin: rem(85px) rem(40px);
+  }
+
+  .menu-section__col-content--active {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+  }
+
+  .board-type__descr-text {
+    font-size: 16px;
+    margin: rem(42px) rem(53px) rem(40px) rem(38px);
+  }
+
   //rewiew section
   .rewiew-container {
     width: 94%;
@@ -248,8 +265,9 @@
 
   //hero section
   .hero {
-    background: #1968b1 url("../img/bg-hero-480.png") center rem(90px) no-repeat;
-    background-size: cover;
+    // background: #1968b1 url("../img/bg-hero-480.png") center rem(90px) / cover no-repeat;
+    // background-size: cover;
+    background-image: url("../img/bg-hero-480.png");
   }
 
   .header {
@@ -334,6 +352,30 @@
   // .employee__name--active + .employee__info {
   //   height: rem(270px);
   // }
+
+  //menu section
+  .menu-section__title {
+    margin: rem(76px) rem(10px);
+    font-size: rem(40px);
+  }
+
+  .menu-section__col-content--active {
+    position: static;
+  }
+
+  .board-type--active {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+  }
+
+  .board-type__title {
+    font-size: rem(40px);
+    width: rem(90px);
+    min-width: rem(90px);
+  }
 
   //rewiew section
   .rewiews__item {

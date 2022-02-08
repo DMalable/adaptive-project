@@ -1,0 +1,52 @@
+.board-type {
+  display: flex;
+  position: static;
+  height: 100%;
+
+  @each $param in (long, short, soft) {
+    &--#{$param} .board-type__title {
+      background: url("../img/bg-menu-item-#{$param}.png") center top / cover no-repeat;
+    }
+  }
+
+  &--active {
+    position: static;
+  }
+}
+
+.board-type__title {
+  display: flex;
+  justify-content: center;
+  font-size: 48px;
+  font-weight: bold;
+  width: rem(100px);
+  min-width: rem(100px);
+  cursor: pointer;
+}
+
+.board-type__title-text {
+  display: flex;
+  align-items: center;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  width: 100%;
+  padding-top: 40px;
+  user-select: none;
+}
+
+.board-type__descr-container {
+  width: 0;
+  overflow: hidden;
+  background: rgba(51, 53, 55, 0.9);
+  backdrop-filter: blur(5px);
+  transition: width 0.5s;
+
+  &--active {
+    width: auto;
+  }
+}
+
+.board-type__descr-text {
+  font-size: 16px;
+  margin: 30px 80px 30px 40px;
+}

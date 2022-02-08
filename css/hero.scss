@@ -2,8 +2,8 @@
   height: 100vh;
   min-height: rem(600px);
   color: #fff;
-  background: #1968b1 url("../img/bg-hero.png") center top no-repeat;
-  background-size: cover;
+  background: #1968b1 url("../img/bg-hero.png") center top / cover no-repeat;
+  // background-size: cover;
 
   &__container {
     display: flex;

@@ -6,8 +6,8 @@
 .contacts__tel:before {
   content: "";
   display: inline-block;
-  background: url("../img/phone-logo.svg") center center no-repeat;
-  background-size: contain;
+  background: url("../img/phone-logo.svg") center center / contain no-repeat;
+  // background-size: contain;
   height: 0.58em;
   width: rem(25px);
 }
