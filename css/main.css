@@ -12,6 +12,7 @@ body {
   background-color: #fff;
   margin: 0;
   height: 100%;
+  overflow: hidden;
 }
 
 .wrapper {
@@ -911,6 +912,8 @@ a:visited {
 }
 .board-type__descr-container--active {
   width: auto;
+  -webkit-transition: width 0.5s;
+  transition: width 0.5s;
 }
 
 .board-type__descr-text {
