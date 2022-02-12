@@ -1,2 +1,5 @@
-prepros.config
+.vscode
 fonts\ttf
+node_modules
+.gitignore.bak
+prepros.config

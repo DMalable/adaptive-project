@@ -6,7 +6,7 @@ const closeSign = document.querySelector(".fullscreen-menu__close");
 const menuLink = document.querySelectorAll(".menu__link");
 const body = document.body;
 
-$(window).on("load", () => {
+document.addEventListener("DOMContentLoaded", () => {
   hamburger.addEventListener("click", function (event) {
     event.preventDefault();
     body.style.overflow = "hidden";
@@ -82,26 +82,6 @@ $(window).on("load", () => {
     // console.log(textBlock.height(reqHeight));
   });
 
-  //review section -------------------------------------------------
-
-  $(".interactive-avatar__link").on("click", (e) => {
-    e.preventDefault();
-    const $this = $(e.currentTarget);
-    const curItem = $this.closest(".interactive-avatar");
-
-    // add active class to current list item and remove it from other list items
-    curItem.addClass("interactive-avatar--active").siblings().removeClass("interactive-avatar--active");
-    const activeSwitcherNum = $(".interactive-avatar--active").attr("data-open");
-
-    const itemsList = $(".rewiews__item");
-
-    itemsList
-      .filter((ndx, item) => $(item).attr("data-linked-with") === activeSwitcherNum)
-      .addClass("rewiews__item--active")
-      .siblings()
-      .removeClass("rewiews__item--active");
-  });
-
   //menu section -------------------------------------------------
   const accordionBoardTypes = document.querySelectorAll(".board-type__title");
   accordionBoardTypes.forEach((type) => {
@@ -131,6 +111,117 @@ $(window).on("load", () => {
     });
   });
 
+  //review section -------------------------------------------------
+
+  $(".interactive-avatar__link").on("click", (e) => {
+    e.preventDefault();
+    const $this = $(e.currentTarget);
+    const curItem = $this.closest(".interactive-avatar");
+
+    // add active class to current list item and remove it from other list items
+    curItem.addClass("interactive-avatar--active").siblings().removeClass("interactive-avatar--active");
+    const activeSwitcherNum = $(".interactive-avatar--active").attr("data-open");
+
+    const itemsList = $(".rewiews__item");
+
+    itemsList
+      .filter((ndx, item) => $(item).attr("data-linked-with") === activeSwitcherNum)
+      .addClass("rewiews__item--active")
+      .siblings()
+      .removeClass("rewiews__item--active");
+  });
+
+  //video section -------------------------------------------------
+  let intervalID;
+  const video = document.querySelector("#video");
+  video.addEventListener("click", playStop);
+
+  const playButtons = document.querySelectorAll(".play");
+  playButtons.forEach((item) => {
+    item.addEventListener("click", playStop);
+  });
+
+  const durationControl = document.querySelector(".video__duration-line");
+  durationControl.min = 0;
+  durationControl.max = 100;
+  durationControl.value = 0;
+  durationControl.addEventListener("mousedown", stopInterval);
+  durationControl.addEventListener("click", setVideoDuration);
+
+  const muteButton = document.querySelector(".video__mute");
+
+  muteButton.addEventListener("click", mute);
+
+  const soundControl = document.querySelector(".video__volume");
+  soundControl.min = 0;
+  soundControl.max = 10;
+  value = 5;
+  soundControl.addEventListener("click", changeVolume);
+  soundControl.addEventListener("mouseup", changeVolume);
+
+  let playButton = document.querySelector(".video__play-button");
+
+  function playStop() {
+    playButton.classList.toggle("video__play-button--active");
+
+    if (video.paused) {
+      video.play();
+      intervalID = setInterval(udateDuration, 1000 / 10);
+    } else {
+      video.pause();
+      clearInterval(intervalID);
+    }
+  }
+
+  function udateDuration() {
+    // curTime in %
+    const CurTime = (video.currentTime / video.duration) * 100;
+    durationControl.value = CurTime;
+    //scaled value 1..99% for correct duration line visualisation
+    const CurTimeVisible = 1 + CurTime * 0.98;
+    durationControl.style.backgroundImage = `linear-gradient(to right, #fedb3f, #fedb3f ${CurTimeVisible}%, #626262 ${CurTimeVisible}%, #626262 100%)`;
+
+    if (video.ended) {
+      playButton.classList.remove("video__play-button--active");
+      clearInterval(intervalID);
+    }
+  }
+
+  function stopInterval() {
+    console.log("mousedown");
+    video.pause();
+    clearInterval(intervalID);
+  }
+
+  function setVideoDuration() {
+    console.log("click");
+
+    if (video.paused) {
+      video.play();
+      playButton.classList.add("video__play-button--active");
+    } else {
+      video.pause();
+    }
+    video.currentTime = (durationControl.value * video.duration) / 100;
+
+    intervalID = setInterval(udateDuration, 1000 / 10);
+  }
+
+  function mute() {
+    video.muted = !video.muted;
+    muteButton.closest(".video__sound").classList.toggle("video__sound--muted");
+    if (video.muted) {
+      soundControl.value = 0;
+    } else {
+      soundControl.value = video.volume * 10;
+    }
+  }
+
+  function changeVolume() {
+    video.volume = soundControl.value / 10;
+    const soundControlVisible = video.volume * 100;
+    soundControl.style.backgroundImage = `linear-gradient(to right, #fedb3f, #fedb3f ${soundControlVisible}%, #626262 ${soundControlVisible}%, #626262 100%)`;
+  }
   // form section -----------------------------------------------
 
   const orderForm = document.querySelector(".form");
@@ -208,6 +299,31 @@ $(window).on("load", () => {
     });
   });
 
+  //map section
+  ymaps.ready(init);
+  function init() {
+    let myMap = new ymaps.Map("map", {
+      center: [55.752004, 37.576133],
+      zoom: 14,
+      controls: [],
+    });
+
+    var myPlacemark = new ymaps.Placemark([55.752004, 37.576133]);
+
+    var myPlacemark = new ymaps.Placemark(
+      [55.752004, 37.576133],
+      {},
+      {
+        iconLayout: "default#image",
+        iconImageHref: "img/marker.svg",
+        iconImageSize: [58, 73],
+        iconImageOffset: [-28, -73],
+      }
+    );
+    myMap.geoObjects.add(myPlacemark);
+  }
+
+  /* 
   //onepage scroll
   function debounce(func, time) {
     let timeout;
@@ -262,4 +378,5 @@ $(window).on("load", () => {
 
     scroll(directionDown);
   });
+   */
 });
