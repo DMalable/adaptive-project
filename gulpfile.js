@@ -42,13 +42,19 @@ task("copy:images", () => {
     .pipe(reload({ stream: true }));
 });
 
+task("copy:favicons", () => {
+  return src(`${SRC_PATH}/favicon/*`)
+    .pipe(dest(`${DIST_PATH}/favicon`))
+    .pipe(reload({ stream: true }));
+});
+
 task("copy:video", () => {
   return src(`${SRC_PATH}/video/*`)
     .pipe(dest(`${DIST_PATH}/video`))
     .pipe(reload({ stream: true }));
 });
 
-task("copy:all", series(parallel("copy:html", "copy:fonts", "copy:images", "copy:video")));
+task("copy:all", series(parallel("copy:html", "copy:fonts", "copy:images", "copy:favicons", "copy:video")));
 
 task("styles", () => {
   return (
