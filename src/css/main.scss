@@ -1,0 +1,50 @@
+//var
+$containerwidth: 1100px;
+$tabletwidth: 768px;
+$phonewidth: 480px;
+$basefontsize: 18px;
+$yellow: #fedb3f;
+$black: #292929;
+
+@function rem($px) {
+  @return calc($px / $basefontsize) + 0rem;
+}
+
+//fonts
+@import "blocks/fonts.scss";
+
+//all styles
+@import "blocks/base.scss";
+@import "blocks/header.scss";
+@import "blocks/menu.scss";
+@import "blocks/logo.scss";
+@import "blocks/contacts.scss";
+@import "blocks/hamburger.scss";
+@import "blocks/button.scss";
+@import "blocks/hero.scss";
+@import "blocks/section.scss";
+@import "blocks/headline.scss";
+@import "blocks/advantages.scss";
+@import "blocks/catalog.scss";
+@import "blocks/dropdown.scss";
+@import "blocks/slider.scss";
+@import "blocks/surfboard.scss";
+@import "blocks/team.scss";
+@import "blocks/employee.scss";
+@import "blocks/menu-section.scss";
+@import "blocks/board-type.scss";
+@import "blocks/rewiews.scss";
+@import "blocks/interactive-avatar.scss";
+@import "blocks/video.scss";
+@import "blocks/order.scss";
+@import "blocks/form.scss";
+@import "blocks/radio.scss";
+@import "blocks/map.scss";
+@import "blocks/footer.scss";
+@import "blocks/socials.scss";
+@import "blocks/scroller.scss";
+@import "blocks/fullscreen-menu.scss";
+@import "blocks/modal.scss";
+
+//media queries
+@import "blocks/media.scss";

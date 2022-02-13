@@ -1,0 +1,73 @@
+.advantages {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5%;
+}
+
+.advantages__item {
+  position: relative;
+  flex: 1;
+
+  &:after {
+    position: absolute;
+    //half of icon height minus separator height
+    top: calc((rem(128px) - rem(10px)) / 2);
+    right: 0;
+    content: url(../img/separator.png);
+    transform: translateX(50%);
+  }
+
+  &:last-child::after {
+    display: none;
+  }
+}
+
+.advantage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.advantage__pic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  height: rem(128px);
+  width: rem(128px);
+  margin-bottom: rem(15px);
+  background-color: #f2f5f4;
+}
+
+.advantage__svg {
+  display: block;
+  width: 53%;
+  height: 53%;
+  fill: #000;
+}
+// @each $advantage in (fit, strong, unique) {
+//   .advantage__pic--icon--#{$advantage} {
+//     background: url(../img/#{$advantage}-logo.png) center center no-repeat, #f2f5f4;
+//   }
+// }
+
+.advantage__title {
+  font-size: rem(27px);
+  font-weight: bold;
+  margin-bottom: rem(15px);
+}
+
+.advantage__text {
+  font-weight: 300;
+  text-align: center;
+  max-width: rem(280px);
+
+  p {
+    color: #666;
+    line-height: 1.2em;
+  }
+}

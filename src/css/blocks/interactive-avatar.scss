@@ -1,0 +1,53 @@
+.interactive-avatar {
+  margin-right: rem(6px);
+  border-radius: 50%;
+  width: rem(74px);
+  height: rem(74px);
+  overflow: hidden;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.interactive-avatar__link {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.interactive-avatar--active .interactive-avatar__link:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 50%;
+  opacity: 1;
+}
+
+.interactive-avatar__link:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 rem(6px) $yellow;
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+.interactive-avatar__link:hover::after {
+  opacity: 1;
+  transition: opacity 0.15s;
+}
+
+.interactive-avatar__icon {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

@@ -1,5 +1,5 @@
 .vscode
-fonts\ttf
 node_modules
+src\fonts\ttf
 .gitignore.bak
 prepros.config

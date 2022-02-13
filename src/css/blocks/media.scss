@@ -1,0 +1,467 @@
+@media (max-width: ($containerwidth - 10px)) {
+  html {
+    font-size: $basefontsize;
+  }
+
+  .container {
+    // width: 92%;
+    width: 99%;
+  }
+
+  .scroller,
+  .header .menu,
+  .header__contacts,
+  .hero__features {
+    display: none;
+  }
+
+  //hero section
+
+  .hero {
+    background: #1968b1 url("../img/bg-hero-768.png") center rem(90px) / cover no-repeat;
+    // background-size: cover;
+  }
+
+  .hero-container {
+    width: 92%;
+  }
+
+  .header {
+    width: 100%;
+    padding: rem(25px) 0 0;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .hero-container {
+    align-items: center;
+  }
+
+  .hero__content {
+    align-items: center;
+    padding: 0;
+    max-width: 100%;
+    justify-content: center;
+  }
+
+  .hero__title {
+    text-align: center;
+  }
+
+  .hero__descr {
+    text-align: center;
+  }
+
+  //why section
+  .headline__title-descr {
+    width: 57%;
+  }
+
+  .advantages {
+    justify-content: space-between;
+    padding: 0;
+  }
+
+  .advantages__item {
+    max-width: 32%;
+
+    &:after {
+      display: none;
+    }
+  }
+
+  //catalog section
+  .surfboard {
+    flex-direction: column;
+    align-items: center;
+    padding-top: rem(30px);
+  }
+
+  .surfboard__pic {
+    background-position: center center, center 65%;
+    min-height: rem(415px);
+  }
+
+  .slider__arrow-link {
+    transform: translate(90px, -150px);
+
+    &--right {
+      transform: translate(-90px, -150px);
+    }
+  }
+  .surfboard__topline {
+    display: none;
+  }
+
+  .surfboard__info {
+    align-items: center;
+    padding: 0 rem(20px);
+  }
+
+  .surfboard__title {
+    font-size: rem(30px);
+    line-height: 1.1em;
+  }
+
+  .surfboard__descr {
+    text-align: center;
+  }
+
+  .surfboard__size-item:first-child {
+    margin-left: 20px;
+  }
+
+  .surfboard__bottomline {
+    max-width: rem(350px);
+  }
+
+  //team section
+  .team__list {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: rem(520px);
+  }
+
+  .employee {
+    min-height: 0;
+    margin-bottom: rem(10px);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .employee__avatar {
+    display: none;
+
+    &--tablet {
+      display: block;
+    }
+  }
+
+  .employee__name--active + .employee__info {
+    opacity: 1;
+    //height changes by js
+    // height: rem(380px);
+  }
+
+  //menu-section
+  .menu-section__title {
+    margin: rem(85px) rem(40px);
+  }
+
+  .menu-section__col-content--active {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+  }
+
+  .board-type__descr-text {
+    font-size: 16px;
+    margin: rem(42px) rem(53px) rem(40px) rem(38px);
+  }
+
+  //rewiew section
+  .rewiew-container {
+    width: 94%;
+  }
+
+  .rewiews__item {
+    flex-direction: column;
+    align-items: center;
+    margin: 0 0 3.6vh; //rem(36px);
+    padding: rem(56px) rem(23px) rem(42px);
+    min-height: rem(418px);
+  }
+
+  .rewiews__avatar {
+    width: rem(130px);
+    height: rem(130px);
+    margin-right: 0;
+    margin-bottom: rem(32px);
+  }
+
+  .reviews__descr {
+    align-items: center;
+    text-align: center;
+  }
+
+  .rewiews__text {
+    width: 100%;
+    // text-align: center;
+  }
+
+  //order section
+  .order {
+    background-image: url("../img/bg-order-768.png");
+  }
+
+  .form {
+    flex-direction: column;
+    // align-items: center;
+    margin: 0 auto;
+    max-width: 63%;
+  }
+
+  .form__col {
+    margin-right: 0;
+
+    &:first-child {
+      margin-bottom: rem(10px);
+    }
+  }
+
+  .form__row {
+    margin-bottom: rem(14px);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .form__input {
+    height: rem(36px);
+    padding: rem(8px) rem(10px);
+  }
+
+  .form__input--textarea {
+    height: rem(82px);
+    margin-bottom: rem(5px);
+  }
+
+  .form__controls:last-child {
+    justify-content: center;
+  }
+
+  .form__controls--margin--big {
+    margin-bottom: rem(35px);
+  }
+  //map section
+  .map-container {
+    width: 100%;
+  }
+
+  .footer {
+    padding: 0 rem(30px) 0;
+  }
+}
+
+@media (max-width: ($tabletwidth - 10px)) {
+  html {
+    font-size: $basefontsize;
+  }
+
+  .container {
+    width: 95%;
+  }
+
+  .section__title {
+    font-size: rem(40px);
+  }
+
+  //hero section
+  .hero {
+    // background: #1968b1 url("../img/bg-hero-480.png") center rem(90px) / cover no-repeat;
+    // background-size: cover;
+    background-image: url("../img/bg-hero-480.png");
+  }
+
+  .header {
+    margin-bottom: 13vh;
+  }
+
+  .fullscreen-menu {
+    justify-content: center;
+  }
+
+  .menu--vertical .menu__list {
+    margin-top: 0;
+  }
+
+  .hero__title {
+    font-size: rem(40px);
+    line-height: 0.9em;
+    margin-bottom: rem(10px);
+  }
+
+  .hero__descr,
+  .button {
+    font-size: rem(18px);
+  }
+
+  .headline__title {
+    margin-bottom: 0;
+  }
+
+  .headline__title-descr {
+    width: 95%;
+  }
+
+  .advantages {
+    flex-direction: column;
+  }
+
+  .advantages__item {
+    flex-direction: row;
+    max-width: 100%;
+    margin-bottom: rem(36px);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .advantage__pic {
+    margin-right: rem(12px);
+    margin-bottom: 0;
+  }
+
+  .advantage__title {
+    margin-bottom: rem(5px);
+  }
+
+  .advantage__text {
+    text-align: left;
+  }
+
+  //catalog section
+  .slider__arrow {
+    position: absolute;
+    top: rem(200px);
+    &:first-child {
+      left: 0;
+    }
+    &:last-child {
+      right: 0;
+    }
+  }
+
+  .slider__arrow-link {
+    transform: translate(0, 0);
+  }
+
+  //team section
+  .employee__avatar {
+    max-width: rem(140px);
+  }
+  //height changes by js
+  // .employee__name--active + .employee__info {
+  //   height: rem(270px);
+  // }
+
+  //menu section
+  .menu-section__title {
+    margin: rem(76px) rem(10px);
+    font-size: rem(40px);
+  }
+
+  .menu-section__col-content--active {
+    position: static;
+  }
+
+  .board-type--active {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+  }
+
+  .board-type__title {
+    font-size: rem(40px);
+    width: rem(90px);
+    min-width: rem(90px);
+  }
+
+  //rewiew section
+  .rewiews__item {
+    padding-bottom: rem(30px);
+    margin-bottom: rem(25px);
+  }
+
+  .interactive-avatar__link:after {
+    box-shadow: inset 0 0 0 rem(4px) $yellow;
+  }
+
+  .rewiews__switcher-item {
+    width: rem(64px);
+    height: rem(64px);
+    margin-right: rem(10px);
+  }
+
+  .rewiews__text {
+    margin-bottom: rem(15px);
+  }
+
+  //catalog section
+  .catalog .slider {
+    padding: 0;
+  }
+
+  .surfboard__pic {
+    min-height: rem(340px);
+    width: 64%;
+    margin-bottom: 35px;
+  }
+
+  .surfboard__info {
+    padding: 0 rem(10px);
+  }
+
+  .surfboard__descr {
+    line-height: 1.2em;
+  }
+  // order section
+  .form {
+    max-width: 100%;
+  }
+
+  .form__controls {
+    justify-content: center;
+  }
+
+  //map section
+
+  .map-container {
+    width: 100%;
+  }
+
+  .footer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.8em;
+    padding: 0;
+    height: 24%;
+  }
+
+  .footer__contacts {
+    display: block;
+    margin-bottom: rem(12px);
+
+    .contacts__tel {
+      display: block;
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: ($phonewidth - 10px)) {
+  html {
+    font-size: $basefontsize - 6px;
+  }
+
+  //section why
+  .advantages__item {
+    justify-content: center;
+  }
+
+  .socials__pic {
+    width: rem(24px);
+    height: rem(24px);
+  }
+}

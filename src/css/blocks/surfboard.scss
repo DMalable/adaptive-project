@@ -1,0 +1,124 @@
+.surfboard {
+  display: flex;
+  width: 100%;
+  // max-width: 1000px;
+  height: 100%;
+  padding: rem(65px) rem(20px) 0;
+}
+
+.surfboard__pic {
+  min-height: rem(650px);
+  width: 56%;
+  background-position: center -10%, center 65%;
+  background-repeat: no-repeat;
+  background-size: contain, auto 68%;
+}
+
+.surfboard--type--long .surfboard__pic {
+  background-image: url(../img/longboard.png), url(../img/bg-surfboard.png);
+}
+
+.surfboard--type--short .surfboard__pic {
+  background-image: url(../img/shortboard.png), url(../img/bg-surfboard.png);
+}
+
+.surfboard__info {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: left;
+  padding: 0 rem(15px);
+}
+
+.surfboard__topline {
+  margin-bottom: rem(52px);
+}
+
+.surfboard__parameters {
+  position: relative;
+  background-color: #3a587e;
+  width: rem(91px);
+  height: rem(91px);
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #3465a3;
+  }
+}
+
+.surfboard__parameters-icon {
+  width: 38px;
+  margin: 0 26px;
+  padding-top: 15px;
+}
+
+.surfboard__parameters-caption {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: rem(14px);
+  font-weight: 700;
+  text-align: center;
+}
+
+.surfboard__parameters-dropdown {
+  position: absolute;
+  left: 9999px;
+  top: 0;
+  opacity: 0;
+}
+
+.surfboard__parameters:hover {
+  .surfboard__parameters-dropdown {
+    opacity: 1;
+    left: 100%;
+    transition: opacity 0.3s;
+  }
+}
+
+.surfboard__title {
+  text-transform: uppercase;
+  font-size: rem(36px);
+  font-weight: 700;
+  margin-bottom: rem(15px);
+}
+
+.surfboard__descr {
+  color: #666;
+  margin-bottom: rem(24px);
+  line-height: 1.25em;
+}
+
+.surfboard__size {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: rem(10px);
+  line-height: 1.25em;
+  width: 100%;
+  max-width: rem(300px);
+}
+
+.surfboard__size-title {
+  color: #666;
+}
+
+.surfboard__size-value {
+  font-weight: bold;
+}
+
+.surfboard__bottomline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.surfboard__prise {
+  font-size: rem(60px);
+  color: #151515;
+  // margin-right: auto;
+
+  &-currency {
+    font-size: rem(40px);
+  }
+}
