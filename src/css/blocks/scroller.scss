@@ -4,6 +4,16 @@
   top: 33%;
 }
 
+.scroller--dark {
+  .scroller__link {
+    background-color: #292929;
+  }
+
+  .scroller__item--active .scroller__link {
+    border-color: #292929;
+  }
+}
+
 .scroller__list {
   display: flex;
   flex-direction: column;
@@ -13,7 +23,6 @@
 
 .scroller__item--active .scroller__link {
   border-color: #fff;
-  transition: border-color 0.3s;
 }
 
 .scroller__link {
@@ -30,6 +39,5 @@
 
   &:hover {
     border-color: #fff;
-    transition: border-color 0.3s;
   }
 }

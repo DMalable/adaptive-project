@@ -16,7 +16,7 @@
   <body>
     <div class="wrapper">
       <div class="maincontent">
-        <section class="hero" id="page1">
+        <section data-sidemenu-theme="white" class="hero" data-section-id="hero">
           <div class="container hero-container">
             <header class="header">
               <div class="header__col">
@@ -25,13 +25,15 @@
               <div class="header__col">
                 <nav class="menu">
                   <ul class="menu__list">
-                    <li class="menu__item"><a href="#page2" class="menu__link">О нас</a></li>
-                    <li class="menu__item"><a href="#page3" class="menu__link">Серфборды</a></li>
-                    <li class="menu__item"><a href="#page4" class="menu__link">Команда</a></li>
-                    <li class="menu__item"><a href="#page5" class="menu__link">Меню</a></li>
-                    <li class="menu__item"><a href="#page6" class="menu__link">Отзывы</a></li>
-                    <li class="menu__item"><a href="#page7" class="menu__link">Как мы работаем</a></li>
-                    <li class="menu__item"><a href="#page9" class="menu__link">Контакты</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link" data-scroll-to="why">О нас</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link" data-scroll-to="catalog">Серфборды</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link" data-scroll-to="team">Команда</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link" data-scroll-to="menu">Меню</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link" data-scroll-to="rewiew">Отзывы</a></li>
+                    <li class="menu__item">
+                      <a href="#" class="menu__link" data-scroll-to="video">Как мы работаем</a>
+                    </li>
+                    <li class="menu__item"><a href="#" class="menu__link" data-scroll-to="map">Контакты</a></li>
                   </ul>
                 </nav>
               </div>
@@ -45,7 +47,7 @@
               <h1 class="hero__title">Профессиональные доски для серфинга</h1>
               <p class="hero__descr">Самый большой выбор серфбордов в мире</p>
               <div class="hero__button-container">
-                <button class="hero__button button">Заказать</button>
+                <button class="hero__button button" data-scroll-to="order">Заказать</button>
               </div>
               <div class="hero__features">
                 <ul class="hero__features-list">
@@ -72,7 +74,7 @@
             </div>
           </div>
         </section>
-        <section class="section" id="page2">
+        <section data-sidemenu-theme="black" class="section" data-section-id="why">
           <div class="container why-container">
             <div class="section__wrapper">
               <div class="headline">
@@ -126,7 +128,7 @@
             </div>
           </div>
         </section>
-        <section class="section catalog" id="page3">
+        <section data-sidemenu-theme="black" class="section catalog" data-section-id="catalog">
           <div class="container">
             <div class="section__wrapper slider">
               <div class="slider__arrow">
@@ -190,7 +192,7 @@
                         ><span class="surfboard__prise-currency">₽</span>
                       </div>
                       <div class="surfboard__button-container">
-                        <button class="surfboard__button button">Заказать</button>
+                        <button class="surfboard__button button" data-scroll-to="order">Заказать</button>
                       </div>
                     </div>
                   </div>
@@ -250,7 +252,7 @@
                         ><span class="surfboard__prise-currency">₽</span>
                       </div>
                       <div class="surfboard__button-container">
-                        <button class="surfboard__button button">Заказать</button>
+                        <button class="surfboard__button button" data-scroll-to="order">Заказать</button>
                       </div>
                     </div>
                   </div>
@@ -264,7 +266,7 @@
             </div>
           </div>
         </section>
-        <section class="section team" id="page4">
+        <section data-sidemenu-theme="black" class="section team" data-section-id="team">
           <div class="container">
             <div class="section__wrapper">
               <h2 class="section__title">Команда</h2>
@@ -325,7 +327,7 @@
             </div>
           </div>
         </section>
-        <section class="section menu-section" id="page5">
+        <section data-sidemenu-theme="white" class="section menu-section" data-section-id="menu">
           <div class="container">
             <div class="menu-section__col-title"><h2 class="menu-section__title">Меню</h2></div>
             <div class="menu-section__col-content">
@@ -385,7 +387,7 @@
             </div>
           </div>
         </section>
-        <section class="section" id="page6">
+        <section data-sidemenu-theme="black" class="section" data-section-id="rewiew">
           <div class="container rewiew-container">
             <div class="section__wrapper">
               <h2 class="section__title">Отзывы</h2>
@@ -455,7 +457,7 @@
             </div>
           </div>
         </section>
-        <section class="section video" id="page7">
+        <section data-sidemenu-theme="black" class="section video" data-section-id="video">
           <div class="container">
             <div class="section__wrapper">
               <h2 class="section__title">Как мы работаем</h2>
@@ -480,7 +482,7 @@
             </div>
           </div>
         </section>
-        <section class="section order" id="page8">
+        <section data-sidemenu-theme="white" class="section order" data-section-id="order">
           <div class="container">
             <div class="section__wrapper">
               <h2 class="section__title">Закажите доску</h2>
@@ -558,7 +560,7 @@
             </div>
           </div>
         </section>
-        <section class="map" id="page9">
+        <section data-sidemenu-theme="black" class="map" data-section-id="map">
           <div class="container map-container">
             <div class="map__content" id="map"></div>
           </div>
@@ -619,15 +621,17 @@
       </a>
       <nav class="scroller">
         <ul class="scroller__list">
-          <li class="scroller__item scroller__item--active"><a href="#page1" class="scroller__link"></a></li>
-          <li class="scroller__item"><a href="#page2" class="scroller__link"></a></li>
-          <li class="scroller__item"><a href="#page3" class="scroller__link"></a></li>
-          <li class="scroller__item"><a href="#page4" class="scroller__link"></a></li>
-          <li class="scroller__item"><a href="#page5" class="scroller__link"></a></li>
-          <li class="scroller__item"><a href="#page6" class="scroller__link"></a></li>
-          <li class="scroller__item"><a href="#page7" class="scroller__link"></a></li>
-          <li class="scroller__item"><a href="#page8" class="scroller__link"></a></li>
-          <li class="scroller__item"><a href="#page9" class="scroller__link"></a></li>
+          <li class="scroller__item scroller__item--active">
+            <a href="#" class="scroller__link" data-scroll-to="hero"></a>
+          </li>
+          <li class="scroller__item"><a href="#" class="scroller__link" data-scroll-to="why"></a></li>
+          <li class="scroller__item"><a href="#" class="scroller__link" data-scroll-to="catalog"></a></li>
+          <li class="scroller__item"><a href="#" class="scroller__link" data-scroll-to="team"></a></li>
+          <li class="scroller__item"><a href="#" class="scroller__link" data-scroll-to="menu"></a></li>
+          <li class="scroller__item"><a href="#" class="scroller__link" data-scroll-to="rewiew"></a></li>
+          <li class="scroller__item"><a href="#" class="scroller__link" data-scroll-to="video"></a></li>
+          <li class="scroller__item"><a href="#" class="scroller__link" data-scroll-to="order"></a></li>
+          <li class="scroller__item"><a href="#" class="scroller__link" data-scroll-to="map"></a></li>
         </ul>
       </nav>
     </div>
@@ -638,13 +642,13 @@
       </a>
       <nav class="menu menu--vertical">
         <ul class="menu__list">
-          <li class="menu__item"><a href="#page2" class="menu__link">О нас</a></li>
-          <li class="menu__item"><a href="#page3" class="menu__link">Серфборды</a></li>
-          <li class="menu__item"><a href="#page4" class="menu__link">Команда</a></li>
-          <li class="menu__item"><a href="#page5" class="menu__link">Меню</a></li>
-          <li class="menu__item"><a href="#page6" class="menu__link">Отзывы</a></li>
-          <li class="menu__item"><a href="#page7" class="menu__link">Как мы работаем</a></li>
-          <li class="menu__item"><a href="#page9" class="menu__link">Контакты</a></li>
+          <li class="menu__item"><a href="#" class="menu__link" data-scroll-to="why">О нас</a></li>
+          <li class="menu__item"><a href="#" class="menu__link" data-scroll-to="catalog">Серфборды</a></li>
+          <li class="menu__item"><a href="#" class="menu__link" data-scroll-to="team">Команда</a></li>
+          <li class="menu__item"><a href="#" class="menu__link" data-scroll-to="menu">Меню</a></li>
+          <li class="menu__item"><a href="#" class="menu__link" data-scroll-to="rewiew">Отзывы</a></li>
+          <li class="menu__item"><a href="#" class="menu__link" data-scroll-to="video">Как мы работаем</a></li>
+          <li class="menu__item"><a href="#" class="menu__link" data-scroll-to="map">Контакты</a></li>
         </ul>
       </nav>
     </div>

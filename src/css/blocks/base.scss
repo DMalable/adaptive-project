@@ -14,12 +14,17 @@ body {
 }
 
 .wrapper {
-  width: 100%;
-  // min-width: $containerwidth + rem(20px);
-  overflow: hidden;
-  min-height: 100%;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.maincontent {
+  height: 100%;
+  transition: transform 1s;
+  will-change: transform;
 }
 
 .container {

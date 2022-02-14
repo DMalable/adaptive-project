@@ -1,60 +1,137 @@
 (function () {
-  document.addEventListener("DOMContentLoaded", () => {
-    /* 
   //onepage scroll
-  function debounce(func, time) {
-    let timeout;
+  document.addEventListener("DOMContentLoaded", () => {
+    const sections = document.querySelectorAll("section");
+    const sectionsArr = Array.prototype.slice.call(sections);
+    const firstSection = document.querySelector("section");
+    const display = document.querySelector(".maincontent");
+    const sidemenu = document.querySelector(".scroller");
+    const scrollerItems = $(sidemenu).find(".scroller__item");
+    const mobileDetect = new MobileDetect(window.navigator.userAgent);
+    const isMobile = mobileDetect.mobile();
+    let inScroll = false;
 
-    return function () {
-      const context = this;
-      const args = arguments;
+    firstSection.classList.add("active-section");
 
-      clearTimeout(timeout);
-      timeout = setTimeout(() => {
-        func.apply(context, args);
-      }, time);
+    const countSectionPosition = (sectionEq) => {
+      return sectionEq * -100;
     };
-  }
 
-  let scroll = debounce((down) => {
-    console.log(down);
+    const switchScrollerTheme = (sectionEq) => {
+      const currentSection = $(sections).eq(sectionEq);
+      const menuTheme = currentSection.attr("data-sidemenu-theme");
+      const activeClass = "scroller--dark";
 
-    const mainContent = document.querySelector(".maincontent");
-    mainContent.style.transition = "transform 0.5s";
-    const scrollHeight = mainContent.scrollHeight;
-    const screenHeight = window.innerHeight;
-    const numberOfPages = scrollHeight / screenHeight;
-    //diapasone between tops of first and last pages
-    const wiewHeight = [0, (numberOfPages - 1) * screenHeight];
-
-    shiftCounter = (currentShift, shiftSize, interval) => {
-      let resultShift = 0;
-      console.log(currentShift, shiftSize, interval);
-      if (!down) {
-        if (currentShift < interval[0]) {
-          resultShift = currentShift + shiftSize;
-          return resultShift;
-        } else return interval[0];
+      if (menuTheme === "black") {
+        sidemenu.classList.add(activeClass);
       } else {
-        if (currentShift > -1 * interval[1]) {
-          resultShift = currentShift - shiftSize;
-          return resultShift;
-        } else return -1 * interval[1];
+        sidemenu.classList.remove(activeClass);
       }
     };
 
-    heightShift = shiftCounter(heightShift, screenHeight, wiewHeight);
-    mainContent.style.transform = `translateY(${heightShift}px)`;
-  }, 300);
+    const resetItemActiveClass = (list, index, activeClass) => {
+      list.eq(index).addClass(activeClass).siblings().removeClass(activeClass);
+    };
 
-  let heightShift = 0;
+    const performTransition = (sectionEq) => {
+      if (!inScroll) {
+        inScroll = true;
+        const position = countSectionPosition(sectionEq);
 
-  window.addEventListener("wheel", (e) => {
-    e.preventDefault();
-    const directionDown = e.deltaY > 0;
+        switchScrollerTheme(sectionEq);
 
-    scroll(directionDown);
-  });
-   */
+        display.style.transform = `translateY(${position}%)`;
+
+        resetItemActiveClass($(sections), sectionEq, "active-section");
+
+        setTimeout(() => {
+          inScroll = false;
+          resetItemActiveClass(scrollerItems, sectionEq, "scroller__item--active");
+        }, 1000);
+      }
+    };
+
+    const viewportScroller = () => {
+      const activeSection = document.querySelector(".active-section");
+      const activeSectionNumber = sectionsArr.indexOf(activeSection);
+      const nextSection = activeSectionNumber + 1;
+      const prevSection = activeSectionNumber - 1;
+      const isFirstSection = activeSectionNumber <= 0;
+      const isLastSection = activeSectionNumber >= sections.length - 1;
+
+      return {
+        next() {
+          if (!isLastSection) {
+            performTransition(nextSection);
+          }
+        },
+        prev() {
+          if (!isFirstSection) {
+            performTransition(prevSection);
+          }
+        },
+      };
+    };
+
+    window.addEventListener("wheel", (e) => {
+      const $this = e.target;
+      const map = $this.closest(".map__content");
+      const cursorOnMap = map !== null;
+      const directionDown = e.deltaY > 0;
+      const scroller = viewportScroller();
+
+      if (cursorOnMap) return;
+      if (directionDown) {
+        scroller.next();
+      } else {
+        scroller.prev();
+      }
+    });
+
+    window.addEventListener("keydown", (e) => {
+      const tagName = e.target.tagName.toLowerCase();
+      const userTypingInInputs = tagName === "input" || tagName === "textarea";
+      const scroller = viewportScroller();
+      if (!userTypingInInputs) {
+        switch (e.key) {
+          case "ArrowUp":
+            scroller.prev();
+            break;
+
+          case "ArrowDown":
+            scroller.next();
+            break;
+        }
+      }
+    });
+
+    const wrapper = document.querySelector(".wrapper");
+    wrapper.addEventListener("touchmove", (e) => e.preventDefault);
+    const scrollElements = document.querySelectorAll("[data-scroll-to]");
+
+    scrollElements.forEach((item) => {
+      item.addEventListener("click", (e) => {
+        e.preventDefault();
+        const $this = e.currentTarget;
+        const target = $this.getAttribute("data-scroll-to");
+        const reqSection = document.querySelector(`[data-section-id=${target}]`);
+
+        performTransition($(reqSection).index());
+      });
+    });
+
+    if (isMobile) {
+      $("body").swipe({
+        swipe: function (event, direction) {
+          const scroller = viewportScroller();
+          let scrollDirection = "";
+
+          if (direction === "up") scrollDirection = "next";
+          if (direction === "down") scrollDirection = "prev";
+
+          scroller[scrollDirection]();
+        },
+      });
+    }
   });
 })();

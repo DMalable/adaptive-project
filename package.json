@@ -22,7 +22,6 @@
     "@babel/core": "^7.17.2",
     "@babel/preset-env": "^7.16.11",
     "browser-sync": "^2.27.7",
-    "bxslider": "^4.2.14",
     "cross-env": "^7.0.3",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
@@ -42,7 +41,10 @@
     "sass": "^1.49.7"
   },
   "dependencies": {
+    "bxslider": "^4.2.14",
     "jquery": "^3.6.0",
+    "jquery-touchswipe": "^1.6.19",
+    "mobile-detect": "^1.4.5",
     "normalize.css": "^8.0.1"
   }
 }
