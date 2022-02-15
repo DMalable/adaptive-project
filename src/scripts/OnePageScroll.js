@@ -7,6 +7,7 @@
     const display = document.querySelector(".maincontent");
     const sidemenu = document.querySelector(".scroller");
     const scrollerItems = $(sidemenu).find(".scroller__item");
+    //plugin https://www.npmjs.com/package/mobile-detect
     const mobileDetect = new MobileDetect(window.navigator.userAgent);
     const isMobile = mobileDetect.mobile();
     let inScroll = false;
@@ -121,6 +122,7 @@
     });
 
     if (isMobile) {
+      //plugin https://www.npmjs.com/package/jquery-touchswipe
       $("body").swipe({
         swipe: function (event, direction) {
           const scroller = viewportScroller();

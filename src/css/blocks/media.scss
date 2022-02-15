@@ -153,12 +153,12 @@
     margin: rem(85px) rem(40px);
   }
 
-  .menu-section__col-content--active {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-  }
+  // .menu-section__col-content--active {
+  //   position: absolute;
+  //   top: 0;
+  //   bottom: 0;
+  //   right: 0;
+  // }
 
   .board-type__descr-text {
     font-size: 16px;
@@ -359,9 +359,9 @@
     font-size: rem(40px);
   }
 
-  .menu-section__col-content--active {
-    position: static;
-  }
+  // .menu-section__col-content--active {
+  //   position: static;
+  // }
 
   .board-type--active {
     position: absolute;

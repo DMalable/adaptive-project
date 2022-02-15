@@ -15,13 +15,13 @@
   display: block;
 }
 
-.menu-section__col-content {
-  flex: 1;
-}
+// .menu-section__col-content {
+//   flex: 1;
+// }
 
-.menu-section__col-content--active {
-  position: static;
-}
+// .menu-section__col-content--active {
+//   position: static;
+// }
 
 .menu-section__title {
   margin: 110px 50px 0px 85px;
@@ -31,6 +31,9 @@
 }
 
 .menu-section__list {
+  position: absolute;
+  right: 0;
+  top: 0;
   display: flex;
   justify-content: flex-end;
   height: 100%;
